@@ -1,0 +1,1068 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qurtuba | Food Importer & Distributor in Jordan</title>
+<meta name="description" content="Qurtuba For Trading Foodstuffs Est. is an Amman-based food importer. We buy in bulk from producers worldwide and supply the Jordanian market wholesale.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Qurtuba | Food Importer & Distributor in Jordan">
+<meta property="og:description" content="Amman-based food importer buying in bulk from producers worldwide and supplying the Jordanian market wholesale.">
+<meta name="theme-color" content="#143A24">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400..700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Noto+Naskh+Arabic:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #FBF8F1;
+    --cream: #F4EEE1;
+    --sand: #E7DDC8;
+    --ink: #13301F;
+    --muted: #56665A;
+    --green-950: #0F2A1A;
+    --green-900: #143A24;
+    --green-700: #1F5A37;
+    --green-600: #2B784A;
+    --green-300: #7BB36F;
+    --green-100: #E3EEDC;
+    --line: rgba(20, 58, 36, 0.12);
+
+    --serif: "Source Serif 4", Georgia, serif;
+    --sans: "Instrument Sans", system-ui, -apple-system, sans-serif;
+    --arabic: "IBM Plex Sans Arabic", system-ui, sans-serif;
+
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --radius: 18px;
+    --max: 1180px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 400 17px/1.6 var(--sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  .ar { font-family: var(--arabic); }
+
+  .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+  @media (max-width: 600px) { .wrap { padding: 0 16px; } }
+
+  h1, h2, h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.015em; margin: 0; }
+  h2 { font-size: clamp(32px, 4.4vw, 50px); line-height: 1.08; }
+  h3 { font-size: 22px; line-height: 1.25; }
+  p { margin: 0; }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--green-600);
+  }
+  .eyebrow::before { content: ""; width: 22px; height: 1.5px; background: currentColor; }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    height: 50px; padding: 0 24px; border-radius: 999px; border: 0;
+    font: 600 15px/1 var(--sans); cursor: pointer;
+    transition: transform 160ms var(--ease-out), background-color 200ms ease, color 200ms ease, box-shadow 200ms ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .btn:active { transform: scale(0.97); }
+  .btn-primary { background: var(--green-900); color: var(--paper); box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset, 0 6px 18px -8px rgba(15,42,26,0.6); }
+  .btn-ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--line); }
+  .btn-light { background: var(--paper); color: var(--green-900); }
+  .btn svg { width: 16px; height: 16px; transition: transform 200ms var(--ease-out); }
+  @media (hover: hover) and (pointer: fine) {
+    .btn-primary:hover { background: var(--green-700); }
+    .btn-ghost:hover { box-shadow: inset 0 0 0 1.5px var(--green-600); }
+    .btn-light:hover { background: #fff; }
+    .btn:hover svg { transform: translateX(3px); }
+  }
+  :focus-visible { outline: 2px solid var(--green-600); outline-offset: 3px; border-radius: 6px; }
+
+  /* ---------- Header ---------- */
+  .header {
+    position: sticky; top: 0; z-index: 50;
+    transition: background-color 200ms ease, box-shadow 200ms ease;
+  }
+  .header.scrolled {
+    background: rgba(251, 248, 241, 0.86);
+    -webkit-backdrop-filter: saturate(1.4) blur(12px);
+    backdrop-filter: saturate(1.4) blur(12px);
+    box-shadow: 0 1px 0 var(--line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+  .brand { display: flex; align-items: center; gap: 10px; }
+  .brand svg { width: 42px; height: auto; }
+  .brand-name { font: 600 25px/1 var(--serif); color: var(--green-900); letter-spacing: -0.01em; }
+  .nav-links { display: flex; align-items: center; gap: 34px; font-size: 15px; font-weight: 500; }
+  .nav-links a:not(.btn) { color: var(--muted); transition: color 160ms ease; }
+  @media (hover: hover) and (pointer: fine) { .nav-links a:not(.btn):hover { color: var(--ink); } }
+  .nav-links .btn { height: 42px; padding: 0 20px; font-size: 14px; }
+  .nav-end { display: flex; align-items: center; gap: 10px; }
+  .lang-btn {
+    height: 40px; min-width: 64px; padding: 0 14px; border: 0; border-radius: 999px; cursor: pointer;
+    background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--line);
+    font: 600 14px/1 var(--arabic); -webkit-tap-highlight-color: transparent;
+    transition: transform 160ms var(--ease-out), box-shadow 200ms ease;
+  }
+  .lang-btn:active { transform: scale(0.96); }
+  @media (hover: hover) and (pointer: fine) { .lang-btn:hover { box-shadow: inset 0 0 0 1.5px var(--green-600); } }
+  @media (min-width: 861px) { .nav-links { margin-inline-end: 8px; } }
+  .menu-btn {
+    display: none; width: 44px; height: 44px; border: 0; border-radius: 12px;
+    background: transparent; color: var(--ink); cursor: pointer; -webkit-tap-highlight-color: transparent;
+    transition: transform 160ms var(--ease-out);
+  }
+  .menu-btn:active { transform: scale(0.94); }
+  .menu-btn span { display: block; width: 20px; height: 1.5px; margin: 5px auto; background: currentColor; transition: transform 200ms var(--ease-out); }
+  .menu-open .menu-btn span:first-child { transform: translateY(3.25px) rotate(45deg); }
+  .menu-open .menu-btn span:last-child { transform: translateY(-3.25px) rotate(-45deg); }
+
+  @media (max-width: 860px) {
+    .menu-btn { display: block; }
+    .nav-links {
+      position: absolute; left: 12px; right: 12px; top: 70px;
+      flex-direction: column; align-items: stretch; gap: 4px; padding: 10px;
+      background: var(--paper); border-radius: 16px;
+      box-shadow: 0 0 0 1px var(--line), 0 18px 40px -16px rgba(15,42,26,0.35);
+      transform-origin: top right;
+      opacity: 0; transform: scale(0.97) translateY(-4px); pointer-events: none;
+      transition: opacity 160ms ease, transform 200ms var(--ease-out);
+    }
+    .menu-open .nav-links { opacity: 1; transform: none; pointer-events: auto; }
+    .nav-links a:not(.btn) { padding: 12px 14px; border-radius: 10px; color: var(--ink); }
+    .nav-links .btn { margin-top: 6px; height: 48px; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 40px 0 96px; overflow: hidden; }
+  .hero-grid { display: grid; grid-template-columns: 1.08fr 0.92fr; gap: 56px; align-items: center; }
+  .hero h1 {
+    font-size: clamp(42px, 6.2vw, 78px); line-height: 1.02; letter-spacing: -0.025em;
+    margin: 22px 0 24px; color: var(--green-950);
+  }
+  .hero h1 em { font-style: normal; color: var(--green-600); }
+  .hero-lede { font-size: 19px; color: var(--muted); max-width: 520px; }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+  .hero-meta {
+    display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 44px; padding-top: 26px;
+    border-top: 1px solid var(--line); font-size: 14px; color: var(--muted);
+  }
+  .hero-meta span { display: inline-flex; align-items: center; gap: 8px; }
+  .hero-meta span::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--green-300); }
+
+  .arch-stage { position: relative; max-width: 460px; margin-inline-start: auto; width: 100%; }
+  .arch { width: 100%; height: auto; overflow: visible; }
+  .chip {
+    position: absolute; display: flex; align-items: center; gap: 12px;
+    padding: 12px 16px 12px 12px; border-radius: 14px; background: var(--paper);
+    box-shadow: 0 0 0 1px var(--line), 0 14px 30px -14px rgba(15,42,26,0.35);
+    font-size: 14px; line-height: 1.3; white-space: nowrap;
+  }
+  .chip strong { display: block; font-weight: 600; color: var(--ink); }
+  .chip small { color: var(--muted); font-size: 12.5px; }
+  .chip i {
+    flex: none; width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center;
+    background: var(--green-100); color: var(--green-700);
+  }
+  .chip i svg { width: 18px; height: 18px; }
+  .chip-a { left: -56px; top: 20%; }
+  .chip-b { right: -20px; bottom: 9%; }
+
+  @media (max-width: 960px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+    .arch-stage { margin: 0 auto; max-width: 400px; }
+    .chip-a { left: -8px; }
+    .chip-b { right: -8px; }
+  }
+  @media (max-width: 600px) {
+    .hero { padding: 24px 0 72px; }
+    .hero-lede { font-size: 17px; }
+    .hero-ctas .btn { flex: 1 1 100%; }
+    .arch-stage { max-width: 320px; }
+    .chip { padding: 9px 12px 9px 9px; font-size: 13px; }
+    .chip i { width: 30px; height: 30px; }
+    .chip-a { left: -4px; }
+    .chip-b { right: -4px; }
+  }
+
+  /* Leaf mark entrance — first visit only, grows from its base */
+  .leaf { transform-box: fill-box; }
+  .js .hero .leaf { opacity: 0; transform: scale(0.88) translateY(6px); transition: opacity 500ms ease, transform 700ms var(--ease-out); }
+  .js .hero .leaf.l-c { transform-origin: 50% 100%; }
+  .js .hero .leaf.l-l { transform-origin: 100% 100%; }
+  .js .hero .leaf.l-r { transform-origin: 0% 100%; }
+  .js .hero.in .leaf { opacity: 1; transform: none; }
+  .js .hero.in .leaf.l-low { transition-delay: 250ms; }
+  .js .hero.in .leaf.l-up { transition-delay: 360ms; }
+  .js .hero.in .leaf.l-c { transition-delay: 470ms; }
+
+  /* ---------- Generic reveal ---------- */
+  .js .reveal { opacity: 0; transform: translateY(14px); transition: opacity 600ms ease, transform 700ms var(--ease-out); transition-delay: calc(var(--i, 0) * 60ms); }
+  .js .reveal.in { opacity: 1; transform: none; }
+
+  section { scroll-margin-top: 80px; }
+  .section { padding: 112px 0; }
+  .section-head { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: end; margin-bottom: 56px; }
+  .section-head p { color: var(--muted); font-size: 18px; max-width: 470px; justify-self: end; }
+  .section-head h2 { margin-top: 16px; }
+  @media (max-width: 860px) {
+    .section { padding: 80px 0; }
+    .section-head { grid-template-columns: 1fr; gap: 18px; margin-bottom: 40px; }
+    .section-head p { justify-self: start; font-size: 17px; }
+  }
+
+  /* ---------- About strip ---------- */
+  .about { background: var(--green-900); color: var(--paper); position: relative; overflow: hidden; }
+  .about .eyebrow { color: var(--green-300); }
+  .about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 72px; align-items: start; }
+  .about h2 { margin-top: 16px; color: #fff; }
+  .about h2 em { font-style: normal; color: var(--green-300); }
+  .about-body p { color: rgba(251,248,241,0.78); font-size: 18px; }
+  .about-body p + p { margin-top: 18px; }
+  .legal {
+    margin-top: 30px; padding-top: 22px; border-top: 1px solid rgba(251,248,241,0.14);
+    display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    font-size: 14px; color: rgba(251,248,241,0.62);
+  }
+  .legal .ar { font-size: 15px; }
+  .about-mark { position: absolute; inset-inline-end: -90px; bottom: -110px; width: 420px; opacity: 0.06; pointer-events: none; }
+  @media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; gap: 28px; } .about-body p { font-size: 17px; } }
+
+  /* ---------- Services ---------- */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); }
+  .step { padding-block: 32px 8px; padding-inline: 0 28px; position: relative; }
+  .step + .step { padding-inline-start: 28px; border-inline-start: 1px solid var(--line); }
+  .step-num { font: 500 14px/1 var(--serif); color: var(--green-600); font-feature-settings: "tnum"; }
+  .step-icon { width: 48px; height: 48px; margin: 22px 0 22px; color: var(--green-700); }
+  .step h3 { margin-bottom: 10px; }
+  .step p { color: var(--muted); font-size: 15.5px; }
+  @media (max-width: 960px) {
+    .steps { grid-template-columns: 1fr 1fr; }
+    .step:nth-child(3) { padding-inline-start: 0; border-inline-start: 0; }
+    .step:nth-child(n+3) { border-top: 1px solid var(--line); margin-top: 24px; }
+  }
+  @media (max-width: 560px) {
+    .steps { grid-template-columns: 1fr; }
+    .step, .step + .step { padding: 26px 0 4px; border-inline-start: 0; }
+    .step + .step { border-top: 1px solid var(--line); margin-top: 22px; }
+    .step-icon { margin: 16px 0; }
+  }
+
+  /* ---------- Products ---------- */
+  .products { background: var(--cream); }
+  .cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .cat {
+    background: var(--paper); border-radius: var(--radius); overflow: hidden;
+    box-shadow: 0 0 0 1px var(--line);
+    transition: transform 240ms var(--ease-out), box-shadow 240ms ease;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .cat:hover { transform: translateY(-3px); box-shadow: 0 0 0 1px var(--line), 0 20px 40px -24px rgba(15,42,26,0.45); }
+  }
+  .cat-swatch { height: 132px; position: relative; }
+  .cat-swatch::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 55%, rgba(0,0,0,0.06)); }
+  .sw-pulses {
+    background-color: #E6D3A8;
+    background-image:
+      radial-gradient(circle at 50% 50%, #CFAF72 0 7px, transparent 7.6px),
+      radial-gradient(circle at 50% 50%, #B8873F 0 4px, transparent 4.6px);
+    background-size: 24px 24px, 24px 24px; background-position: 0 0, 12px 12px;
+  }
+  .sw-grains {
+    background-color: #EDE2C6;
+    background-image:
+      radial-gradient(ellipse 3.2px 6px at 50% 50%, #C9A458 0 96%, transparent 100%),
+      radial-gradient(ellipse 3.2px 6px at 50% 50%, #B38A3E 0 96%, transparent 100%);
+    background-size: 16px 20px, 16px 20px; background-position: 0 0, 8px 10px;
+  }
+  .sw-seeds {
+    background-color: #F1EADA;
+    background-image:
+      radial-gradient(ellipse 2.4px 4px at 50% 50%, #3A372D 0 98%, transparent 100%),
+      radial-gradient(ellipse 3px 5px at 50% 50%, #D9C795 0 98%, transparent 100%);
+    background-size: 14px 14px, 17px 17px; background-position: 0 0, 6px 8px;
+  }
+  .sw-spices {
+    background-color: #C88A2C;
+    background-image:
+      radial-gradient(circle at 50% 50%, #E4AC3D 0 3px, transparent 3.6px),
+      radial-gradient(circle at 50% 50%, #8E4E1C 0 2px, transparent 2.6px),
+      radial-gradient(circle at 50% 50%, #5E7B3A 0 2.4px, transparent 3px);
+    background-size: 12px 12px, 17px 17px, 23px 23px; background-position: 0 0, 5px 9px, 11px 3px;
+  }
+  .cat-body { padding: 22px 22px 26px; }
+  .cat-title { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-bottom: 14px; }
+  .cat-title .ar { font-size: 15px; color: var(--green-600); }
+  .cat ul { list-style: none; margin: 0; padding: 0; font-size: 15px; }
+  .cat li { display: flex; justify-content: space-between; gap: 10px; padding: 8px 0; border-top: 1px dashed var(--line); }
+  .cat li span:last-child { color: var(--muted); font-size: 13.5px; text-align: end; }
+  .cat-note { display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; align-items: center; margin-top: 30px; color: var(--muted); font-size: 15px; }
+  .pack { display: inline-flex; align-items: center; gap: 10px; }
+  .pack b { font: 600 13px/1 var(--sans); padding: 7px 10px; border-radius: 8px; background: var(--green-900); color: var(--paper); letter-spacing: 0.02em; }
+  @media (max-width: 1060px) { .cat-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .cat-grid { grid-template-columns: 1fr; } .cat-swatch { height: 96px; } }
+
+  /* ---------- Origins ---------- */
+  .origins { padding: 64px 0; border-bottom: 1px solid var(--line); }
+  .origins-row { display: flex; align-items: center; gap: 40px; }
+  .origins-label { flex: none; font: 500 italic 24px/1.2 var(--serif); color: var(--green-900); max-width: 220px; }
+  .origin-list { display: flex; flex-wrap: wrap; gap: 10px; }
+  .origin-list span {
+    padding: 10px 16px; border-radius: 999px; font-size: 15px; font-weight: 500;
+    background: var(--paper); box-shadow: inset 0 0 0 1px var(--line);
+  }
+  .origin-list .more { background: transparent; box-shadow: none; color: var(--muted); font-style: italic; }
+  html[lang="ar"] .origin-list .more { font-style: normal; }
+  @media (max-width: 760px) { .origins-row { flex-direction: column; align-items: flex-start; gap: 22px; } .origins-label { max-width: none; } }
+
+  /* ---------- Why ---------- */
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .pillar { padding: 34px 30px 34px; border-radius: var(--radius); background: var(--cream); }
+  .pillar-icon { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; background: var(--green-900); color: var(--green-300); margin-bottom: 26px; }
+  .pillar-icon svg { width: 24px; height: 24px; }
+  .pillar h3 { margin-bottom: 10px; }
+  .pillar p { color: var(--muted); font-size: 16px; }
+  @media (max-width: 860px) { .why-grid { grid-template-columns: 1fr; } }
+
+  .serve { margin-top: 64px; padding: 34px 0 0; border-top: 1px solid var(--line); display: flex; gap: 32px; align-items: baseline; flex-wrap: wrap; }
+  .serve h3 { font-size: 20px; flex: none; }
+  .serve ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 28px; color: var(--muted); font-size: 16px; }
+  .serve li { display: inline-flex; align-items: center; gap: 10px; }
+  .serve li::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--green-600); }
+
+  /* ---------- Contact ---------- */
+  .contact { padding: 0 0 112px; }
+  .contact-card {
+    background: var(--green-900); color: var(--paper); border-radius: 28px;
+    display: grid; grid-template-columns: 0.95fr 1.05fr; overflow: hidden; position: relative;
+  }
+  .contact-info { padding: 60px 56px; position: relative; }
+  .contact-info .eyebrow { color: var(--green-300); }
+  .contact-info h2 { color: #fff; margin: 16px 0 18px; }
+  .contact-info > p { color: rgba(251,248,241,0.74); font-size: 17px; max-width: 400px; }
+  .details { list-style: none; margin: 38px 0 0; padding: 0; display: grid; gap: 16px; }
+  .details li { display: flex; align-items: center; gap: 14px; font-size: 16px; }
+  .details i { flex: none; width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: rgba(251,248,241,0.08); color: var(--green-300); }
+  .details i svg { width: 18px; height: 18px; }
+  .details a { transition: color 160ms ease; }
+  @media (hover: hover) and (pointer: fine) { .details a:hover { color: var(--green-300); } }
+
+  .form { background: var(--paper); color: var(--ink); margin: 10px; border-radius: 20px; padding: 44px 40px; display: grid; gap: 16px; grid-template-columns: 1fr 1fr; align-content: start; }
+  .form h3 { grid-column: 1 / -1; margin-bottom: 4px; }
+  .field { display: grid; gap: 7px; }
+  .field.full { grid-column: 1 / -1; }
+  .field label { font-size: 13.5px; font-weight: 600; color: var(--muted); }
+  .field input, .field select, .field textarea {
+    width: 100%; font: 400 16px/1.4 var(--sans); color: var(--ink);
+    padding: 13px 14px; border-radius: 12px; border: 0; background: var(--cream);
+    box-shadow: inset 0 0 0 1px transparent; transition: box-shadow 160ms ease, background-color 160ms ease;
+    -webkit-appearance: none; appearance: none;
+  }
+  .field select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%2356665A' stroke-width='1.6'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 14px center; padding-right: 38px;
+  }
+  .field textarea { resize: vertical; min-height: 110px; }
+  .field input:focus, .field select:focus, .field textarea:focus { outline: none; background: #fff; box-shadow: inset 0 0 0 1.5px var(--green-600); }
+  .form-actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+  .form-actions .btn { flex: 1 1 200px; }
+  .form-hint { grid-column: 1 / -1; font-size: 13px; color: var(--muted); }
+
+  @media (max-width: 960px) {
+    .contact-card { grid-template-columns: 1fr; }
+    .contact-info { padding: 48px 32px 24px; }
+  }
+  @media (max-width: 560px) {
+    .contact { padding-bottom: 72px; }
+    .contact-card { border-radius: 22px; }
+    .contact-info { padding: 40px 22px 20px; }
+    .form { padding: 28px 18px; grid-template-columns: 1fr; margin: 6px; border-radius: 18px; }
+  }
+
+  /* ---------- Footer ---------- */
+  .footer { border-top: 1px solid var(--line); padding: 40px 0 48px; font-size: 14px; color: var(--muted); }
+  .footer-row { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+  .footer .tagline { font: italic 400 16px/1 var(--serif); color: var(--green-700); }
+
+  /* ---------- Phone refinements ---------- */
+  a, button, select { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+  .pack b { white-space: nowrap; }
+  .cat-grid::-webkit-scrollbar { display: none; }
+  .cat-dots { display: none; }
+
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    .section { padding: 64px 0; }
+    .section-head { margin-bottom: 32px; }
+    h2 { font-size: 31px; }
+
+    /* Hero: the arch opens the page, text centred beneath it */
+    .hero { padding-top: 8px; }
+    .hero-grid { gap: 12px; text-align: center; }
+    .arch-stage {
+      order: -1; max-width: 220px; aspect-ratio: 400 / 322; overflow: hidden;
+      -webkit-mask-image: linear-gradient(to bottom, #000 91%, transparent);
+      mask-image: linear-gradient(to bottom, #000 91%, transparent);
+    }
+    .chip { display: none; }
+    .hero .eyebrow { justify-content: center; text-wrap: balance; }
+    .hero .eyebrow::before { display: none; }
+    .hero h1 { margin: 14px 0 18px; }
+    .hero-lede { margin-inline: auto; }
+    .hero-ctas { margin-top: 28px; }
+    .hero-meta { justify-content: center; gap: 8px 18px; margin-top: 28px; padding-top: 20px; font-size: 13.5px; }
+
+    /* Steps: icon beside text */
+    .step, .step + .step { display: grid; grid-template-columns: 40px 1fr; column-gap: 16px; padding: 22px 0 2px; }
+    .step + .step { margin-top: 18px; }
+    .step-icon { grid-column: 1; grid-row: 1 / span 3; width: 40px; height: 40px; margin: 2px 0 0; }
+    .step-num, .step h3, .step p { grid-column: 2; }
+    .step-num { margin-bottom: 4px; }
+    .step h3 { margin-bottom: 6px; }
+
+    /* Products: swipeable row with a peek of the next card */
+    .cat-grid {
+      display: flex; gap: 12px; overflow-x: auto; overscroll-behavior-x: contain;
+      scroll-snap-type: x mandatory; scrollbar-width: none;
+      margin-inline: -16px; padding: 4px 16px 6px; scroll-padding-inline: 16px;
+    }
+    .cat { flex: 0 0 84%; scroll-snap-align: start; }
+    .js .cat.reveal { opacity: 1; transform: none; }
+    .cat-dots { display: flex; justify-content: center; gap: 6px; margin-top: 14px; }
+    .cat-dots i { width: 6px; height: 6px; border-radius: 50%; background: var(--line); transition: background-color 200ms ease, transform 200ms var(--ease-out); }
+    .cat-dots i.on { background: var(--green-600); transform: scale(1.25); }
+    .cat-note { flex-direction: column; align-items: stretch; gap: 16px; margin-top: 24px; }
+    .cat-note .btn { width: 100%; }
+
+    /* Origins */
+    .origins { padding: 48px 0; }
+    .origin-list span { padding: 8px 14px; font-size: 14px; }
+
+    /* Why: icon beside title */
+    .why-grid { gap: 12px; }
+    .pillar { display: grid; grid-template-columns: 44px 1fr; column-gap: 16px; padding: 22px 20px; }
+    .pillar-icon { grid-row: 1 / span 2; width: 44px; height: 44px; border-radius: 12px; margin: 0; }
+    .pillar-icon svg { width: 20px; height: 20px; }
+    .pillar h3 { font-size: 20px; margin-bottom: 6px; }
+    .pillar p { font-size: 15px; }
+    .serve { margin-top: 40px; padding-top: 28px; flex-direction: column; gap: 14px; }
+    .serve ul { flex-direction: column; gap: 10px; }
+
+    /* Contact */
+    .contact-info h2 { margin: 12px 0 14px; }
+    .details { margin-top: 28px; }
+    .details li { align-items: flex-start; }
+    .details li > span, .details li > a { padding-top: 9px; }
+
+    /* Footer */
+    .footer { padding: 32px 0 calc(36px + env(safe-area-inset-bottom)); }
+    .footer-row { flex-direction: column; align-items: flex-start; gap: 14px; }
+  }
+
+  @media (max-width: 360px) {
+    .hero h1 { font-size: 36px; }
+    h2 { font-size: 28px; }
+    .brand-name { font-size: 22px; }
+    .brand svg { width: 36px; }
+    .lang-btn { min-width: 0; padding: 0 12px; }
+  }
+
+  /* ---------- Arabic / RTL ---------- */
+  html[lang="ar"] {
+    --serif: "Noto Naskh Arabic", "Source Serif 4", Georgia, serif;
+    --sans: "IBM Plex Sans Arabic", "Instrument Sans", system-ui, sans-serif;
+  }
+  html[lang="ar"] body { line-height: 1.8; }
+  html[lang="ar"] body * { letter-spacing: 0 !important; }   /* tracking breaks Arabic joining */
+  html[lang="ar"] .brand-name { font-family: "Source Serif 4", Georgia, serif; }
+  html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3 { font-weight: 600; }
+  html[lang="ar"] .hero h1 { font-size: clamp(36px, 5.2vw, 64px); line-height: 1.35; }
+  html[lang="ar"] h2 { line-height: 1.4; }
+  html[lang="ar"] .eyebrow { font-size: 14px; }
+  html[lang="ar"] .origins-label, html[lang="ar"] .footer .tagline { font-style: normal; }
+  html[lang="ar"] .arch text[data-i18n] { font-size: 16px; font-family: "IBM Plex Sans Arabic", sans-serif; }
+  html[lang="ar"] .lang-btn { font-family: "Instrument Sans", sans-serif; }
+  [dir="rtl"] .btn svg { transform: scaleX(-1); }
+  @media (hover: hover) and (pointer: fine) { [dir="rtl"] .btn:hover svg { transform: translateX(-3px) scaleX(-1); } }
+  [dir="rtl"] .field select { background-position: left 14px center; padding-right: 14px; padding-left: 38px; }
+  @media (max-width: 860px) { [dir="rtl"] .nav-links { transform-origin: top left; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .js .reveal, .js .hero .leaf { transform: none !important; transition: opacity 300ms ease !important; transition-delay: 0ms !important; }
+    .cat, .btn, .btn svg { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Reusable Qurtuba leaf mark (redrawn from the logo) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="mark" viewBox="0 0 600 372">
+      <g class="leaf l-low l-l">
+        <path fill="#2B784A" d="M4 305C82 260 192 268 296 363C262 357 232 352 182 360C112 372 52 356 4 305Z"/>
+        <path fill="#143A24" d="M116 323C182 301 252 322 294 361C238 342 180 326 116 323Z"/>
+      </g>
+      <g class="leaf l-low l-r"><g transform="translate(600 0) scale(-1 1)">
+        <path fill="#2B784A" d="M4 305C82 260 192 268 296 363C262 357 232 352 182 360C112 372 52 356 4 305Z"/>
+        <path fill="#143A24" d="M116 323C182 301 252 322 294 361C238 342 180 326 116 323Z"/>
+      </g></g>
+      <g class="leaf l-up l-l">
+        <path fill="#2B784A" d="M104 133C190 145 262 200 284 300C290 326 294 346 296 363C272 338 244 318 210 300C150 268 120 220 104 133Z"/>
+        <path fill="#143A24" d="M186 210C242 242 282 298 296 361C276 320 240 268 186 210Z"/>
+      </g>
+      <g class="leaf l-up l-r"><g transform="translate(600 0) scale(-1 1)">
+        <path fill="#2B784A" d="M104 133C190 145 262 200 284 300C290 326 294 346 296 363C272 338 244 318 210 300C150 268 120 220 104 133Z"/>
+        <path fill="#143A24" d="M186 210C242 242 282 298 296 361C276 320 240 268 186 210Z"/>
+      </g></g>
+      <g class="leaf l-c">
+        <path fill="#7BB36F" d="M300 5C332 37 357 78 357 126C357 176 326 214 308 252L300 268L292 252C274 214 243 176 243 126C243 78 268 37 300 5Z"/>
+        <path fill="#143A24" d="M300 92L306 250L300 266L294 250Z"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="header" id="header">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Qurtuba">
+      <svg viewBox="0 0 600 372"><use href="#mark"/></svg>
+      <span class="brand-name">Qurtuba</span>
+    </a>
+    <div class="nav-end">
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#services" data-i18n="nav.services">What we do</a>
+        <a href="#products" data-i18n="nav.products">Products</a>
+        <a href="#why" data-i18n="nav.why">Why Qurtuba</a>
+        <a href="#contact" class="btn btn-primary" data-i18n="nav.contact">Contact us</a>
+      </nav>
+      <button class="lang-btn" id="langBtn" type="button" lang="ar" aria-label="عرض الموقع بالعربية">عربي</button>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow reveal" style="--i:0" data-i18n="hero.eyebrow">Food importer &amp; distributor · Amman, Jordan</span>
+        <h1 class="reveal" style="--i:1" data-i18n="hero.title">Your trusted<br>partner for food<br>trade in <em>Jordan</em>.</h1>
+        <p class="hero-lede reveal" style="--i:2" data-i18n="hero.lede">Qurtuba buys quality food products directly from producers around the world, imports them by the ton on its own account, and supplies them wholesale across Jordan.</p>
+        <div class="hero-ctas reveal" style="--i:3">
+          <a href="#contact" class="btn btn-primary"><span data-i18n="hero.cta1">Become a supplier</span>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+          <a href="#products" class="btn btn-ghost" data-i18n="hero.cta2">What we import</a>
+        </div>
+        <div class="hero-meta reveal" style="--i:4">
+          <span data-i18n="hero.m1">Import &amp; customs clearance</span>
+          <span data-i18n="hero.m2">Wholesale distribution</span>
+          <span data-i18n="hero.m3">Based in Amman</span>
+        </div>
+      </div>
+
+      <div class="arch-stage reveal" style="--i:2">
+        <!-- Horseshoe arch, a nod to the Mezquita of Córdoba (Qurtuba) -->
+        <svg class="arch" viewBox="0 0 400 500" role="img" aria-label="Qurtuba">
+          <defs>
+            <radialGradient id="glow" cx="50%" cy="42%" r="60%">
+              <stop offset="0" stop-color="#1F5A37"/>
+              <stop offset="1" stop-color="#0F2A1A"/>
+            </radialGradient>
+            <clipPath id="archInner"><path d="M62 500V275A145 145 0 1 1 338 275V500Z"/></clipPath>
+          </defs>
+          <path d="M30 500V275H62V500Z M338 500V275H370V500Z" fill="#E7DDC8"/>
+          <path d="M46 275A160 160 0 1 1 354 275" fill="none" stroke="#E7DDC8" stroke-width="32"/>
+          <path d="M46 275A160 160 0 1 1 354 275" fill="none" stroke="#2B784A" stroke-width="32" pathLength="23" stroke-dasharray="1 1" stroke-dashoffset="0.5"/>
+          <path d="M62 500V275A145 145 0 1 1 338 275V500Z" fill="url(#glow)"/>
+          <g clip-path="url(#archInner)">
+            <path d="M62 430C140 405 260 405 338 430V500H62Z" fill="#143A24"/>
+            <path d="M62 462C150 440 250 440 338 462V500H62Z" fill="#0F2A1A"/>
+          </g>
+          <svg x="95" y="170" width="210" height="130" viewBox="0 0 600 372">
+            <use href="#mark"/>
+          </svg>
+          <text x="200" y="352" text-anchor="middle" fill="#FBF8F1" font-family="'Source Serif 4', Georgia, serif" font-size="38" font-weight="600" letter-spacing="-0.4">Qurtuba</text>
+          <text x="200" y="380" text-anchor="middle" fill="#7BB36F" font-family="Instrument Sans, IBM Plex Sans Arabic, sans-serif" font-size="11.5" font-weight="500" letter-spacing="3" data-i18n="tagline.caps">FRESH · PURE · NATURAL</text>
+        </svg>
+
+        <div class="chip chip-a">
+          <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg></i>
+          <div><strong data-i18n="chip.a1">From import to delivery</strong><small data-i18n="chip.a2">Clearance · Storage · Distribution</small></div>
+        </div>
+        <div class="chip chip-b">
+          <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg></i>
+          <div><strong data-i18n="chip.b1">Sourced worldwide</strong><small data-i18n="chip.b2">Asia · Africa · Europe &amp; more</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about section" id="about">
+    <svg class="about-mark" viewBox="0 0 600 372" aria-hidden="true"><use href="#mark"/></svg>
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <span class="eyebrow" data-i18n="about.eyebrow">About Qurtuba</span>
+        <h2 data-i18n="about.title">Who we are and what we do <em>in Jordan.</em></h2>
+      </div>
+      <div class="about-body reveal" style="--i:1">
+        <p data-i18n="about.p1">Qurtuba For Trading Foodstuffs Est. is a Jordanian food trading and distribution company based in Amman, the capital of Jordan. We specialise in sourcing, importing and wholesale supply of food and beverage products for the Jordanian market.</p>
+        <p data-i18n="about.p2">We buy directly from producers and exporters abroad, in tonnage, ship the goods to Jordan on our own account, and sell them to businesses across the Kingdom. We focus on reliable supply, strong relationships and professional service.</p>
+        <div class="legal">
+          <span lang="en" dir="ltr">Qurtuba For Trading Foodstuffs Est.</span>
+          <span class="ar" dir="rtl" lang="ar">مؤسسة قرطبة لتجارة المواد الغذائية</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="reveal">
+          <span class="eyebrow" data-i18n="svc.eyebrow">What we do</span>
+          <h2 data-i18n="svc.title">From your origin<br>to the Jordanian market.</h2>
+        </div>
+        <p class="reveal" style="--i:1" data-i18n="svc.lede">Every step is ours: we buy abroad, ship, clear customs, store in Amman and deliver across Jordan.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal" style="--i:0">
+          <div class="step-num">01</div>
+          <svg class="step-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="21" cy="21" r="12"/><path d="M30 30l9 9"/><path d="M21 15c-3 2.4-4.5 4.6-4.5 6.8 0 2.3 2 4.2 4.5 4.2s4.5-1.9 4.5-4.2c0-2.2-1.5-4.4-4.5-6.8z"/></svg>
+          <h3 data-i18n="svc.s1">Buying</h3>
+          <p data-i18n="svc.s1p">We buy directly from producers and exporters abroad, by the ton, choosing origin, grade and packing for the Jordanian market.</p>
+        </div>
+        <div class="step reveal" style="--i:1">
+          <div class="step-num">02</div>
+          <svg class="step-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 30h38l-4 9H9z"/><path d="M11 30V20h10v10M21 30V14h10v16M31 30v-7h7v7"/><path d="M24 14V7"/></svg>
+          <h3 data-i18n="svc.s2">Importing</h3>
+          <p data-i18n="svc.s2p">We ship the goods to Jordan ourselves and handle import documentation and customs clearance.</p>
+        </div>
+        <div class="step reveal" style="--i:2">
+          <div class="step-num">03</div>
+          <svg class="step-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18L24 8l18 10v22H6z"/><path d="M14 40V26h20v14"/><path d="M14 32h20"/></svg>
+          <h3 data-i18n="svc.s3">Wholesale supply</h3>
+          <p data-i18n="svc.s3p">We hold stock in Amman and supply it in bulk to trade customers.</p>
+        </div>
+        <div class="step reveal" style="--i:3">
+          <div class="step-num">04</div>
+          <svg class="step-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h24v20H4zM28 19h8l7 7v6H28z"/><circle cx="12" cy="35" r="3.5"/><circle cx="35" cy="35" r="3.5"/></svg>
+          <h3 data-i18n="svc.s4">Distribution</h3>
+          <p data-i18n="svc.s4p">We deliver to retailers, wholesalers and food businesses across Jordan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="products section" id="products">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="reveal">
+          <span class="eyebrow" data-i18n="prod.eyebrow">What we import</span>
+          <h2 data-i18n="prod.title">Pantry staples,<br>in wholesale volume.</h2>
+        </div>
+        <p class="reveal" style="--i:1" data-i18n="prod.lede">Our current range covers dry foods: pulses, grains, seeds, spices and herbs. We are open to new products and new origins.</p>
+      </div>
+
+      <div class="cat-grid">
+        <article class="cat reveal" style="--i:0">
+          <div class="cat-swatch sw-pulses" aria-hidden="true"></div>
+          <div class="cat-body">
+            <div class="cat-title"><h3 data-i18n="c1">Pulses &amp; Legumes</h3><span class="ar" data-i18n="c1.alt">البقوليات</span></div>
+            <ul>
+              <li><span data-i18n="p.chickpeas">Chickpeas</span><span data-i18n="o.in">India</span></li>
+              <li><span data-i18n="p.lentils">Lentils</span><span data-i18n="o.kz">Kazakhstan</span></li>
+              <li><span data-i18n="p.fava">Fava beans</span><span data-i18n="o.sy">Syria</span></li>
+              <li><span data-i18n="p.whitebeans">White beans</span><span>&nbsp;</span></li>
+              <li><span data-i18n="p.lupini">Lupini beans</span><span data-i18n="o.cl">Chile</span></li>
+            </ul>
+          </div>
+        </article>
+        <article class="cat reveal" style="--i:1">
+          <div class="cat-swatch sw-grains" aria-hidden="true"></div>
+          <div class="cat-body">
+            <div class="cat-title"><h3 data-i18n="c2">Grains &amp; Cereals</h3><span class="ar" data-i18n="c2.alt">الحبوب</span></div>
+            <ul>
+              <li><span data-i18n="p.bulgur">Red bulgur</span><span>&nbsp;</span></li>
+              <li><span data-i18n="p.wheat">Cracked wheat</span><span>&nbsp;</span></li>
+              <li><span data-i18n="p.oats">Oats</span><span>&nbsp;</span></li>
+              <li><span data-i18n="p.vermicelli">Vermicelli</span><span>&nbsp;</span></li>
+              <li><span data-i18n="p.popcorn">Popcorn kernels</span><span data-i18n="o.ar">Argentina</span></li>
+            </ul>
+          </div>
+        </article>
+        <article class="cat reveal" style="--i:2">
+          <div class="cat-swatch sw-seeds" aria-hidden="true"></div>
+          <div class="cat-body">
+            <div class="cat-title"><h3 data-i18n="c3">Seeds</h3><span class="ar" data-i18n="c3.alt">البذور</span></div>
+            <ul>
+              <li><span data-i18n="p.sesame">Sesame</span><span data-i18n="o.eg">Egypt</span></li>
+              <li><span data-i18n="p.sunflower">Sunflower seeds</span><span data-i18n="o.ar">Argentina</span></li>
+              <li><span data-i18n="p.flax">Flaxseed</span><span data-i18n="o.tr">Türkiye</span></li>
+              <li><span data-i18n="p.mustard">Mustard seed</span><span data-i18n="p.mustard.v">Yellow · Black</span></li>
+              <li><span data-i18n="p.fenugreek">Fenugreek</span><span data-i18n="o.in">India</span></li>
+            </ul>
+          </div>
+        </article>
+        <article class="cat reveal" style="--i:3">
+          <div class="cat-swatch sw-spices" aria-hidden="true"></div>
+          <div class="cat-body">
+            <div class="cat-title"><h3 data-i18n="c4">Spices &amp; Herbs</h3><span class="ar" data-i18n="c4.alt">البهارات والأعشاب</span></div>
+            <ul>
+              <li><span data-i18n="p.turmeric">Turmeric</span><span data-i18n="v.ground">Ground</span></li>
+              <li><span data-i18n="p.curry">Curry</span><span>&nbsp;</span></li>
+              <li><span data-i18n="p.parsley">Parsley</span><span data-i18n="v.dried">Dried</span></li>
+              <li><span data-i18n="p.basil">Basil</span><span data-i18n="v.dried">Dried</span></li>
+              <li><span data-i18n="p.guava">Guava leaves</span><span>&nbsp;</span></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+      <div class="cat-dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+
+      <div class="cat-note reveal">
+        <span class="pack"><b data-i18n="pack.kg">25 kg</b> <span data-i18n="pack.note">Most lines supplied in bulk sacks, with smaller trade packs on selected items.</span></span>
+        <a href="#contact" class="btn btn-ghost" data-i18n="prod.cta">Offer us your products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Origins -->
+  <section class="origins">
+    <div class="wrap origins-row reveal">
+      <p class="origins-label" data-i18n="orig.label">We currently import from</p>
+      <div class="origin-list">
+        <span data-i18n="o.ar">Argentina</span><span data-i18n="o.kz">Kazakhstan</span><span data-i18n="o.tr">Türkiye</span><span data-i18n="o.eg">Egypt</span><span data-i18n="o.sy">Syria</span><span data-i18n="o.cl">Chile</span><span data-i18n="o.in">India</span><span data-i18n="o.cn">China</span><span data-i18n="o.af">Africa</span><span class="more" data-i18n="o.more">and more</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why -->
+  <section class="section" id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="reveal">
+          <span class="eyebrow" data-i18n="why.eyebrow">Why Qurtuba</span>
+          <h2 data-i18n="why.title">Built on trust,<br>kept by delivery.</h2>
+        </div>
+        <p class="reveal" style="--i:1" data-i18n="why.lede">For producers abroad, we are a direct buyer: clear orders, bulk volumes and long-term relationships.</p>
+      </div>
+      <div class="why-grid">
+        <div class="pillar reveal" style="--i:0">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+          <h3 data-i18n="why.1">On the ground in Jordan</h3>
+          <p data-i18n="why.1p">We are based in Amman and know the local market, its buyers and its import process.</p>
+        </div>
+        <div class="pillar reveal" style="--i:1">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 21v-5h5"/></svg></div>
+          <h3 data-i18n="why.2">Buying by the ton</h3>
+          <p data-i18n="why.2p">Planned, repeat orders in tonnage, so suppliers can plan production with confidence.</p>
+        </div>
+        <div class="pillar reveal" style="--i:2">
+          <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20v-1.5a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4V20"/><circle cx="10" cy="7.5" r="3.5"/><path d="M21 20v-1.5a4 4 0 0 0-3-3.9M15.5 4.2a3.5 3.5 0 0 1 0 6.6"/></svg></div>
+          <h3 data-i18n="why.3">Professional service</h3>
+          <p data-i18n="why.3p">Clear terms, honest communication and a team that treats every partner as long-term.</p>
+        </div>
+      </div>
+
+      <div class="serve reveal">
+        <h3 data-i18n="serve.title">Who we supply in Jordan</h3>
+        <ul>
+          <li data-i18n="serve.1">Supermarkets &amp; retailers</li>
+          <li data-i18n="serve.2">Wholesalers</li>
+          <li data-i18n="serve.3">Roasteries &amp; spice shops</li>
+          <li data-i18n="serve.4">Restaurants &amp; catering</li>
+          <li data-i18n="serve.5">Food manufacturers</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-card reveal">
+        <div class="contact-info">
+          <span class="eyebrow" data-i18n="ct.eyebrow">Get in touch</span>
+          <h2 data-i18n="ct.title">Let’s work together.</h2>
+          <p data-i18n="ct.lede">Are you a producer or exporter with products to sell, or a business in Jordan looking for supply? Tell us about it and we will get back to you.</p>
+          <ul class="details">
+            <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></i><span data-i18n="ct.addr">Amman, Hashemite Kingdom of Jordan<br><small style="opacity:.65">Local time GMT+3</small></span></li>
+            <!-- TODO: replace with real phone number -->
+            <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></i><a href="tel:+96270000000" dir="ltr">+962 7 0000 0000</a></li>
+            <!-- TODO: replace with real email -->
+            <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></i><a href="mailto:info@qurtuba.com" dir="ltr">info@qurtuba.com</a></li>
+          </ul>
+        </div>
+
+        <form class="form" id="inquiry">
+          <h3 data-i18n="f.title">Send us a message</h3>
+          <div class="field"><label for="f-name" data-i18n="f.name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="f-biz" data-i18n="f.company">Company</label><input id="f-biz" name="business" autocomplete="organization"></div>
+          <div class="field"><label for="f-phone" data-i18n="f.phone">Phone / WhatsApp</label><input id="f-phone" name="phone" type="tel" dir="ltr" autocomplete="tel" inputmode="tel" placeholder="+ country code" data-i18n-ph="f.phone.ph" required></div>
+          <div class="field"><label for="f-country" data-i18n="f.country">Country</label><input id="f-country" name="country" autocomplete="country-name" required></div>
+          <div class="field">
+            <label for="f-type" data-i18n="f.type">I am a…</label>
+            <select id="f-type" name="type">
+              <option data-i18n="f.t1">Producer / exporter</option>
+              <option data-i18n="f.t3">Trading company</option>
+              <option data-i18n="f.t4">Buyer in Jordan</option>
+              <option data-i18n="f.t5">Other</option>
+            </select>
+          </div>
+          <div class="field full"><label for="f-msg" data-i18n="f.msg">Message</label><textarea id="f-msg" name="message" placeholder="e.g. We export Egyptian sesame and can supply 50 tons a month." data-i18n-ph="f.msg.ph"></textarea></div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" data-via="whatsapp" data-i18n="f.wa">Send via WhatsApp</button>
+            <button type="submit" class="btn btn-ghost" data-via="email" data-i18n="f.email">Send by email</button>
+          </div>
+          <p class="form-hint" data-i18n="f.hint">Your message goes directly to our team in Amman.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-row">
+    <a href="#top" class="brand" aria-label="Qurtuba">
+      <svg viewBox="0 0 600 372" style="width:34px"><use href="#mark"/></svg>
+      <span class="brand-name" style="font-size:21px">Qurtuba</span>
+    </a>
+    <span class="tagline" data-i18n="tagline">Fresh · Pure · Natural</span>
+    <span>© <span id="year">2026</span> <span data-i18n="footer.legal">Qurtuba For Trading Foodstuffs Est. · Amman, Jordan</span></span>
+  </div>
+</footer>
+
+<script>
+  // ---- Contact settings (replace with real details) ----
+  const WHATSAPP_NUMBER = "96270000000";       // international format, no "+"
+  const INQUIRY_EMAIL   = "info@qurtuba.com";
+
+  // ---- Arabic copy (English lives in the HTML) ----
+  const AR = {
+    "meta.title": "قرطبة | استيراد وتوزيع المواد الغذائية في الأردن",
+    "meta.desc": "مؤسسة قرطبة لتجارة المواد الغذائية: مستورد مواد غذائية مقرّه عمّان، يشتري بالجملة من المنتجين حول العالم ويورّد للسوق الأردني.",
+    "nav.about": "من نحن",
+    "nav.services": "ماذا نقدّم",
+    "nav.products": "منتجاتنا",
+    "nav.why": "لماذا قرطبة",
+    "nav.contact": "تواصل معنا",
+    "hero.eyebrow": "استيراد وتوزيع المواد الغذائية · عمّان، الأردن",
+    "hero.title": "شريككم الموثوق<br>لتجارة المواد الغذائية<br>في <em>الأردن</em>.",
+    "hero.lede": "تشتري قرطبة منتجات غذائية عالية الجودة مباشرة من المنتجين حول العالم، وتستوردها بالأطنان لحسابها الخاص، ثم تورّدها بالجملة في مختلف أنحاء الأردن.",
+    "hero.cta1": "كن مورّداً لنا",
+    "hero.cta2": "ماذا نستورد",
+    "hero.m1": "الاستيراد والتخليص الجمركي",
+    "hero.m2": "التوزيع بالجملة",
+    "hero.m3": "مقرّنا في عمّان",
+    "tagline.caps": "طازج · نقي · طبيعي",
+    "tagline": "طازج · نقي · طبيعي",
+    "chip.a1": "من الاستيراد حتى التسليم",
+    "chip.a2": "التخليص · التخزين · التوزيع",
+    "chip.b1": "مصادر من حول العالم",
+    "chip.b2": "آسيا · أفريقيا · أوروبا وغيرها",
+    "about.eyebrow": "عن قرطبة",
+    "about.title": "من نحن وماذا نعمل <em>في الأردن.</em>",
+    "about.p1": "مؤسسة قرطبة لتجارة المواد الغذائية شركة أردنية متخصصة في تجارة وتوزيع المواد الغذائية، مقرّها عمّان، عاصمة المملكة الأردنية الهاشمية. نعمل في توريد واستيراد وتوزيع المواد الغذائية والمشروبات بالجملة للسوق الأردني.",
+    "about.p2": "نشتري مباشرة من المنتجين والمصدّرين في الخارج بالأطنان، ونشحن البضائع إلى الأردن لحسابنا الخاص، ثم نبيعها للشركات والمحلات في مختلف أنحاء المملكة. نركّز على انتظام التوريد، ومتانة العلاقات، والخدمة المهنية.",
+    "svc.eyebrow": "ماذا نقدّم",
+    "svc.title": "من بلد المنشأ<br>إلى السوق الأردني.",
+    "svc.lede": "كل خطوة نتولّاها بأنفسنا: نشتري من الخارج، ونشحن، ونخلّص جمركياً، ونخزّن في عمّان، ونوزّع في مختلف أنحاء الأردن.",
+    "svc.s1": "الشراء",
+    "svc.s1p": "نشتري مباشرة من المنتجين والمصدّرين في الخارج بالأطنان، ونختار المنشأ والدرجة والتعبئة بما يناسب السوق الأردني.",
+    "svc.s2": "الاستيراد",
+    "svc.s2p": "نشحن البضائع إلى الأردن بأنفسنا، ونتولّى وثائق الاستيراد والتخليص الجمركي.",
+    "svc.s3": "البيع بالجملة",
+    "svc.s3p": "نحتفظ بالمخزون في عمّان ونورّده بكميات كبيرة لعملائنا من التجار.",
+    "svc.s4": "التوزيع",
+    "svc.s4p": "نوصل المنتجات إلى محلات التجزئة وتجار الجملة والمنشآت الغذائية في مختلف أنحاء الأردن.",
+    "prod.eyebrow": "ماذا نستورد",
+    "prod.title": "مواد تموينية أساسية<br>بكميات الجملة.",
+    "prod.lede": "تشمل تشكيلتنا الحالية المواد الغذائية الجافة: البقوليات والحبوب والبذور والبهارات والأعشاب، ونرحّب بمنتجات ومناشئ جديدة.",
+    "c1": "البقوليات", "c1.alt": "Pulses &amp; Legumes",
+    "c2": "الحبوب", "c2.alt": "Grains &amp; Cereals",
+    "c3": "البذور", "c3.alt": "Seeds",
+    "c4": "البهارات والأعشاب", "c4.alt": "Spices &amp; Herbs",
+    "p.chickpeas": "حمّص", "p.lentils": "عدس", "p.fava": "فول عريض", "p.whitebeans": "فاصولياء بيضاء", "p.lupini": "ترمس",
+    "p.bulgur": "برغل أحمر", "p.wheat": "قمح جريش", "p.oats": "شوفان", "p.vermicelli": "شعيرية", "p.popcorn": "ذرة بوشار",
+    "p.sesame": "سمسم", "p.sunflower": "بزر دوّار الشمس", "p.flax": "بزر الكتان", "p.mustard": "بزر الخردل", "p.mustard.v": "أصفر · أسود", "p.fenugreek": "حلبة",
+    "p.turmeric": "كركم", "p.curry": "كاري", "p.parsley": "بقدونس", "p.basil": "ريحان", "p.guava": "ورق الجوافة",
+    "v.ground": "مطحون", "v.dried": "مجفّف",
+    "o.ar": "الأرجنتين", "o.kz": "كازاخستان", "o.tr": "تركيا", "o.eg": "مصر", "o.sy": "سوريا", "o.cl": "تشيلي", "o.in": "الهند", "o.cn": "الصين", "o.af": "أفريقيا", "o.more": "وغيرها",
+    "pack.kg": "25 كغ",
+    "pack.note": "تتوفر معظم الأصناف في أكياس جملة، مع عبوات تجارية أصغر لبعض الأصناف.",
+    "prod.cta": "اعرضوا علينا منتجاتكم",
+    "orig.label": "نستورد حالياً من",
+    "why.eyebrow": "لماذا قرطبة",
+    "why.title": "نبني الثقة،<br>ونصونها بالالتزام.",
+    "why.lede": "بالنسبة للمنتجين في الخارج، نحن مشترٍ مباشر: طلبيات واضحة، وكميات كبيرة، وعلاقات طويلة الأمد.",
+    "why.1": "حضور فعلي في الأردن",
+    "why.1p": "مقرّنا في عمّان، ونعرف السوق المحلي ومشتريه وإجراءات الاستيراد فيه.",
+    "why.2": "نشتري بالأطنان",
+    "why.2p": "طلبيات مخطّطة ومتكررة بالأطنان، ليتمكّن مورّدونا من التخطيط للإنتاج بثقة.",
+    "why.3": "خدمة مهنية",
+    "why.3p": "شروط واضحة وتواصل صادق، وفريق يتعامل مع كل شريك على أساس علاقة طويلة الأمد.",
+    "serve.title": "من نخدم في الأردن",
+    "serve.1": "السوبرماركت ومحلات التجزئة",
+    "serve.2": "تجار الجملة",
+    "serve.3": "المحامص ومحلات البهارات",
+    "serve.4": "المطاعم وخدمات التموين",
+    "serve.5": "مصانع الأغذية",
+    "ct.eyebrow": "تواصل معنا",
+    "ct.title": "لنعمل معاً.",
+    "ct.lede": "هل أنتم منتجون أو مصدّرون لديكم منتجات للبيع، أو شركة في الأردن تبحث عن مورّد؟ أخبرونا وسنتواصل معكم.",
+    "ct.addr": "عمّان، المملكة الأردنية الهاشمية<br><small style=\"opacity:.65\">التوقيت المحلي GMT+3</small>",
+    "f.title": "أرسلوا لنا رسالة",
+    "f.name": "الاسم",
+    "f.company": "الشركة",
+    "f.phone": "الهاتف / واتساب",
+    "f.phone.ph": "+ رمز الدولة",
+    "f.country": "الدولة",
+    "f.type": "طبيعة النشاط",
+    "f.t1": "منتج / مصدّر",
+    "f.t2": "مالك علامة تجارية",
+    "f.t3": "شركة تجارية",
+    "f.t4": "مشترٍ في الأردن",
+    "f.t5": "أخرى",
+    "f.msg": "الرسالة",
+    "f.msg.ph": "مثال: نصدّر السمسم المصري ويمكننا توريد 50 طناً شهرياً.",
+    "f.wa": "إرسال عبر واتساب",
+    "f.email": "إرسال بالبريد الإلكتروني",
+    "f.hint": "تصل رسالتكم مباشرة إلى فريقنا في عمّان.",
+    "footer.legal": "مؤسسة قرطبة لتجارة المواد الغذائية · عمّان، الأردن",
+    "menu.open": "فتح القائمة",
+    "menu.close": "إغلاق القائمة",
+    "msg.head": "استفسار من موقع قرطبة",
+    "msg.name": "الاسم", "msg.business": "الشركة", "msg.country": "الدولة", "msg.type": "النشاط", "msg.phone": "الهاتف",
+    "msg.subject": "استفسار"
+  };
+  const EN_EXTRA = {
+    "menu.open": "Open menu", "menu.close": "Close menu",
+    "msg.head": "Inquiry from the Qurtuba website",
+    "msg.name": "Name", "msg.business": "Company", "msg.country": "Country", "msg.type": "Type", "msg.phone": "Phone",
+    "msg.subject": "Inquiry"
+  };
+
+  document.documentElement.classList.add("js");
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // ---- Language ----
+  const root = document.documentElement;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  const EN = { ...EN_EXTRA, "meta.title": document.title, "meta.desc": metaDesc.content };
+  document.querySelectorAll("[data-i18n]").forEach(el => { EN[el.dataset.i18n] ??= el.innerHTML; });
+  document.querySelectorAll("[data-i18n-ph]").forEach(el => { EN[el.dataset.i18nPh] = el.placeholder; });
+
+  let lang = "en";
+  const t = (k) => (lang === "ar" ? AR : EN)[k] ?? EN[k];
+  const langBtn = document.getElementById("langBtn");
+
+  function setLang(next, { save = true } = {}) {
+    lang = next === "ar" ? "ar" : "en";
+    root.lang = lang;
+    root.dir = lang === "ar" ? "rtl" : "ltr";
+    document.querySelectorAll("[data-i18n]").forEach(el => { el.innerHTML = t(el.dataset.i18n); });
+    document.querySelectorAll("[data-i18n-ph]").forEach(el => { el.placeholder = t(el.dataset.i18nPh); });
+    document.title = t("meta.title");
+    metaDesc.content = t("meta.desc");
+    // The switch always offers the *other* language, written in that language
+    langBtn.textContent = lang === "ar" ? "English" : "عربي";
+    langBtn.lang = lang === "ar" ? "en" : "ar";
+    langBtn.setAttribute("aria-label", lang === "ar" ? "View the site in English" : "عرض الموقع بالعربية");
+    setMenu(header.classList.contains("menu-open"));
+    if (save) {
+      try { localStorage.setItem("qurtuba-lang", lang); } catch (e) {}
+      const url = new URL(location.href);
+      lang === "ar" ? url.searchParams.set("lang", "ar") : url.searchParams.delete("lang");
+      history.replaceState(null, "", url);
+    }
+  }
+  langBtn.addEventListener("click", () => setLang(lang === "ar" ? "en" : "ar"));
+
+  // Header shadow once scrolled
+  const header = document.getElementById("header");
+  const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 8);
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  // Mobile menu
+  const menuBtn = document.getElementById("menuBtn");
+  function setMenu(open) {
+    header.classList.toggle("menu-open", open);
+    menuBtn.setAttribute("aria-expanded", open);
+    menuBtn.setAttribute("aria-label", t(open ? "menu.close" : "menu.open"));
+  }
+  menuBtn.addEventListener("click", () => setMenu(!header.classList.contains("menu-open")));
+  document.querySelectorAll("#navLinks a").forEach(a => a.addEventListener("click", () => setMenu(false)));
+  document.addEventListener("keydown", e => { if (e.key === "Escape") setMenu(false); });
+  document.addEventListener("click", e => { if (!header.contains(e.target)) setMenu(false); });
+
+  // Initial language: ?lang=ar link → saved choice → browser language
+  (() => {
+    const param = new URL(location.href).searchParams.get("lang");
+    let saved = null;
+    try { saved = localStorage.getItem("qurtuba-lang"); } catch (e) {}
+    const initial = param || saved || ((navigator.language || "").toLowerCase().startsWith("ar") ? "ar" : "en");
+    if (initial === "ar") setLang("ar", { save: false });
+  })();
+
+  // Hero leaves grow in on first paint
+  requestAnimationFrame(() => requestAnimationFrame(() => document.getElementById("hero").classList.add("in")));
+
+  // Scroll reveals (once)
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add("in"); io.unobserve(entry.target); }
+    });
+  }, { rootMargin: "0px 0px -60px 0px", threshold: 0.08 });
+  document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+  // Product carousel dots (phones only)
+  const catGrid = document.querySelector(".cat-grid");
+  const dots = document.querySelectorAll(".cat-dots i");
+  const cards = [...catGrid.children];
+  const dotIO = new IntersectionObserver((entries) => {
+    entries.forEach(en => { if (en.isIntersecting) dots.forEach((d, i) => d.classList.toggle("on", cards[i] === en.target)); });
+  }, { root: catGrid, threshold: 0.6 });
+  cards.forEach(c => dotIO.observe(c));
+
+  // Inquiry form → WhatsApp or email (no server needed)
+  const form = document.getElementById("inquiry");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const d = Object.fromEntries(new FormData(form));
+    const lines = [
+      t("msg.head"),
+      `${t("msg.name")}: ${d.name}`,
+      d.business && `${t("msg.business")}: ${d.business}`,
+      `${t("msg.country")}: ${d.country}`,
+      `${t("msg.type")}: ${d.type}`,
+      `${t("msg.phone")}: ${d.phone}`,
+      d.message && `\n${d.message}`
+    ].filter(Boolean).join("\n");
+    const via = e.submitter?.dataset.via || "whatsapp";
+    if (via === "email") {
+      const subject = `${t("msg.subject")} — ${d.business || d.name}, ${d.country}`;
+      location.href = `mailto:${INQUIRY_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines)}`;
+    } else {
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines)}`, "_blank", "noopener");
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Qurtuba For Trading Foodstuffs Est. — Amman-based food importer. Two landing page designs.">
+<meta name="theme-color" content="#0B2015">
+<title>Qurtuba Landing Pages</title>
+<style>
+  /* Layout: the chosen version fills the screen; a floating switch sits at the bottom. Single look by choice (brand greens). */
+  :root {
+    --night: #0B2015;
+    --glass: rgba(11, 32, 21, 0.78);
+    --paper: #FAF7F0;
+    --leaf: #7BB36F;
+    --ink: #0F2A1A;
+    --ui: "Instrument Sans", system-ui, -apple-system, sans-serif;
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    color-scheme: light;
+  }
+  html, body { height: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--ui); overflow: hidden; }
+  .frame { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; display: block; background: var(--paper); }
+
+  .switch {
+    position: fixed; z-index: 10; left: 50%; transform: translateX(-50%);
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    display: grid; grid-template-columns: 1fr 1fr; padding: 5px; border-radius: 999px;
+    background: var(--glass); -webkit-backdrop-filter: blur(16px) saturate(1.4); backdrop-filter: blur(16px) saturate(1.4);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12), 0 14px 36px -12px rgba(0,0,0,0.5);
+  }
+  .switch::before {
+    content: ""; position: absolute; top: 5px; bottom: 5px; left: 5px; width: calc(50% - 5px);
+    border-radius: 999px; background: var(--paper);
+    transform: translateX(var(--x, 0%)); transition: transform 260ms var(--ease-out);
+  }
+  .switch[data-active="v2"] { --x: 100%; }
+  .switch button {
+    position: relative; z-index: 1; border: 0; background: transparent; cursor: pointer;
+    height: 42px; padding: 0 20px; border-radius: 999px; white-space: nowrap;
+    font: 600 14.5px/1 var(--ui); color: rgba(250, 247, 240, 0.78);
+    transition: color 200ms ease, transform 160ms var(--ease-out);
+    -webkit-tap-highlight-color: transparent;
+  }
+  .switch button:active { transform: scale(0.97); }
+  .switch button[aria-pressed="true"] { color: var(--ink); }
+  .switch button:focus-visible { outline: 2px solid var(--leaf); outline-offset: 2px; }
+  @media (hover: hover) and (pointer: fine) { .switch button[aria-pressed="false"]:hover { color: var(--paper); } }
+  @media (prefers-reduced-motion: reduce) { .switch::before { transition: none; } }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@600&display=swap">
+
+</head>
+<body>
+<iframe class="frame" id="frame" title="Qurtuba website" src="v2.html"></iframe>
+
+<div class="switch" id="switch" data-active="v2" role="group" aria-label="Choose design version">
+  <button type="button" id="btn-v1" data-v="v1" aria-pressed="false">Version 1</button>
+  <button type="button" id="btn-v2" data-v="v2" aria-pressed="true">Version 2</button>
+</div>
+
+<script>
+  const frame = document.getElementById("frame");
+  const sw = document.getElementById("switch");
+  const buttons = [...sw.querySelectorAll("button")];
+
+  function show(v, { remember = true } = {}) {
+    if (v !== "v1" && v !== "v2") v = "v2";
+    sw.dataset.active = v;
+    buttons.forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
+    const target = v + ".html";
+    if (!frame.getAttribute("src").endsWith(target)) frame.src = target;
+    if (remember) {
+      try { localStorage.setItem("qurtuba-version", v); } catch (e) {}
+      try { history.replaceState(null, "", "#" + v); } catch (e) {}
+    }
+  }
+
+  buttons.forEach(b => b.addEventListener("click", () => show(b.dataset.v)));
+
+  // Open on #v1 / #v2 when linked directly, otherwise the last version viewed, otherwise Version 2
+  let start = (location.hash || "").replace("#", "");
+  if (!start) { try { start = localStorage.getItem("qurtuba-version") || ""; } catch (e) {} }
+  show(start || "v2", { remember: false });
+</script>
+</body>
+</html>
