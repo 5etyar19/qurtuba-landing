@@ -1,87 +1,1051 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Qurtuba For Trading Foodstuffs Est. — Amman-based food importer. Two landing page designs.">
-<meta name="theme-color" content="#0B2015">
-<title>Qurtuba Landing Pages</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qurtuba | Food Importer & Distributor in Jordan</title>
+<meta name="description" content="Qurtuba For Trading Foodstuffs Est. is an Amman-based food importer. We buy in bulk from producers worldwide and supply the Jordanian market wholesale.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Qurtuba | Food Importer & Distributor in Jordan">
+<meta property="og:description" content="Amman-based food importer buying in bulk from producers worldwide and supplying the Jordanian market wholesale.">
+<meta name="theme-color" content="#0F2A1A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/satoshi-700.woff2" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/slides/1.jpg" fetchpriority="high">
 <style>
-  /* Layout: the chosen version fills the screen; a floating switch sits at the bottom. Single look by choice (brand greens). */
+  @font-face { font-family: 'Satoshi'; src: url('assets/fonts/satoshi-400.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Satoshi'; src: url('assets/fonts/satoshi-500.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Satoshi'; src: url('assets/fonts/satoshi-700.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+  @font-face { font-family: 'Satoshi'; src: url('assets/fonts/satoshi-900.woff2') format('woff2'); font-weight: 900; font-style: normal; font-display: swap; }
   :root {
     --night: #0B2015;
-    --glass: rgba(11, 32, 21, 0.78);
-    --paper: #FAF7F0;
-    --leaf: #7BB36F;
     --ink: #0F2A1A;
-    --ui: "Instrument Sans", system-ui, -apple-system, sans-serif;
+    --green-900: #143A24;
+    --green-700: #1F5A37;
+    --green-600: #2B784A;
+    --green-300: #7BB36F;
+    --paper: #FAF7F0;
+    --cream: #F2ECDF;
+    --sand: #E7DDC8;
+    --muted: #5A6A5E;
+    --line: rgba(15, 42, 26, 0.12);
+
+    --sans: "Satoshi", "IBM Plex Sans Arabic", system-ui, -apple-system, sans-serif;
     --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
-    color-scheme: light;
+    --max: 1240px;
+    --chapter: clamp(88px, 13vw, 192px);
+    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
-  html, body { height: 100%; }
-  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--ui); overflow: hidden; }
-  .frame { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; display: block; background: var(--paper); }
+  html[lang="ar"] { --sans: "IBM Plex Sans Arabic", "Satoshi", system-ui, sans-serif; }
 
-  .switch {
-    position: fixed; z-index: 10; left: 50%; transform: translateX(-50%);
-    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
-    display: grid; grid-template-columns: 1fr 1fr; padding: 5px; border-radius: 999px;
-    background: var(--glass); -webkit-backdrop-filter: blur(16px) saturate(1.4); backdrop-filter: blur(16px) saturate(1.4);
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12), 0 14px 36px -12px rgba(0,0,0,0.5);
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font: 400 17px/1.6 var(--sans); -webkit-font-smoothing: antialiased;
   }
-  .switch::before {
-    content: ""; position: absolute; top: 5px; bottom: 5px; left: 5px; width: calc(50% - 5px);
-    border-radius: 999px; background: var(--paper);
-    transform: translateX(var(--x, 0%)); transition: transform 260ms var(--ease-out);
+  html[lang="ar"] body { line-height: 1.85; }
+  html[lang="ar"] body * { letter-spacing: 0 !important; }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  a, button { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+  h1, h2, h3, p { margin: 0; }
+  h1, h2, h3 { font-weight: 700; letter-spacing: -0.035em; text-wrap: balance; }
+  html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3 { font-weight: 600; }
+  :focus-visible { outline: 2px solid var(--green-300); outline-offset: 3px; border-radius: 8px; }
+
+  main { overflow-x: hidden; overflow-x: clip; width: 100%; max-width: 100%; }
+  .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 32px; }
+  @media (max-width: 600px) { .wrap { padding: 0 16px; } }
+  .grain { position: relative; isolation: isolate; }
+  .grain::after { content: ""; position: absolute; inset: 0; background: var(--grain); opacity: 0.045; pointer-events: none; z-index: 1; }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    height: 54px; padding: 0 28px; border-radius: 999px; border: 0; cursor: pointer;
+    font: 700 15.5px/1 var(--sans); letter-spacing: -0.01em; white-space: nowrap;
+    transition: transform 160ms var(--ease-out), background-color 220ms ease, color 220ms ease, box-shadow 220ms ease;
   }
-  .switch[data-active="v2"] { --x: 100%; }
-  .switch button {
-    position: relative; z-index: 1; border: 0; background: transparent; cursor: pointer;
-    height: 42px; padding: 0 20px; border-radius: 999px; white-space: nowrap;
-    font: 600 14.5px/1 var(--ui); color: rgba(250, 247, 240, 0.78);
-    transition: color 200ms ease, transform 160ms var(--ease-out);
-    -webkit-tap-highlight-color: transparent;
+  .btn:active { transform: scale(0.97); }
+  .btn svg { width: 16px; height: 16px; transition: transform 240ms var(--ease-out); }
+  [dir="rtl"] .btn svg { transform: scaleX(-1); }
+  .btn-cream { background: var(--paper); color: var(--ink); }
+  .btn-glass { background: rgba(255,255,255,0.06); color: #fff; box-shadow: inset 0 0 0 1.5px rgba(255,255,255,0.32); }
+  .btn-ink { background: var(--ink); color: var(--paper); }
+  .btn-line { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--line); }
+  @media (hover: hover) and (pointer: fine) {
+    .btn-cream:hover { background: #fff; }
+    .btn-glass:hover { background: rgba(255,255,255,0.14); }
+    .btn-ink:hover { background: var(--green-700); }
+    .btn-line:hover { box-shadow: inset 0 0 0 1.5px var(--green-600); }
+    .btn:hover svg { transform: translateX(3px); }
+    [dir="rtl"] .btn:hover svg { transform: translateX(-3px) scaleX(-1); }
   }
-  .switch button:active { transform: scale(0.97); }
-  .switch button[aria-pressed="true"] { color: var(--ink); }
-  .switch button:focus-visible { outline: 2px solid var(--leaf); outline-offset: 2px; }
-  @media (hover: hover) and (pointer: fine) { .switch button[aria-pressed="false"]:hover { color: var(--paper); } }
-  @media (prefers-reduced-motion: reduce) { .switch::before { transition: none; } }
+
+  /* ---------- Floating pill nav ---------- */
+  .nav {
+    position: fixed; z-index: 60; top: 16px; left: 50%; transform: translateX(-50%);
+    width: min(1180px, calc(100% - 32px));
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    padding: 8px; padding-inline-start: 20px; border-radius: 999px;
+    color: #fff; background: rgba(11, 32, 21, 0.42);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12), 0 10px 40px -20px rgba(0,0,0,0.5);
+    transition: background-color 300ms ease, color 300ms ease, box-shadow 300ms ease;
+  }
+  @media (hover: hover) and (pointer: fine) and (min-width: 921px) {
+    .nav { -webkit-backdrop-filter: blur(12px) saturate(1.4); backdrop-filter: blur(12px) saturate(1.4); }
+  }
+  @media (max-width: 920px), (hover: none) {
+    .nav { background: rgba(11, 32, 21, 0.92); }
+    .nav.on-light { background: rgba(250, 247, 240, 0.96) !important; }
+  }
+  .nav.on-light { color: var(--ink); background: rgba(250, 247, 240, 0.82); box-shadow: inset 0 0 0 1px var(--line), 0 12px 40px -24px rgba(15,42,26,0.4); }
+  .brand { display: flex; align-items: center; gap: 10px; flex: none; }
+  .brand svg { width: 38px; height: auto; }
+  .brand-name { font: 700 21px/1 "Satoshi", sans-serif; letter-spacing: -0.03em; }
+  .nav-links { display: flex; align-items: center; gap: 30px; font-size: 15px; font-weight: 500; }
+  .nav-links a { opacity: 0.78; transition: opacity 160ms ease; }
+  @media (hover: hover) and (pointer: fine) { .nav-links a:hover { opacity: 1; } }
+  .nav-end { display: flex; align-items: center; gap: 8px; }
+  .nav .btn { height: 44px; padding: 0 20px; font-size: 14.5px; }
+  .nav.on-light .btn-cream { background: var(--ink); color: var(--paper); }
+  .lang-btn {
+    height: 44px; min-width: 64px; padding: 0 14px; border: 0; border-radius: 999px; cursor: pointer;
+    background: transparent; color: inherit; font: 600 14.5px/1 "IBM Plex Sans Arabic", sans-serif;
+    box-shadow: inset 0 0 0 1.5px currentColor; opacity: 0.85;
+    transition: transform 160ms var(--ease-out), opacity 160ms ease;
+  }
+  html[lang="ar"] .lang-btn { font-family: "Satoshi", sans-serif; }
+  .lang-btn:active { transform: scale(0.96); }
+  .menu-btn { display: none; width: 44px; height: 44px; border: 0; border-radius: 999px; background: transparent; color: inherit; cursor: pointer; }
+  .menu-btn span { display: block; width: 18px; height: 1.5px; margin: 5px auto; background: currentColor; transition: transform 220ms var(--ease-out); }
+  .menu-open .menu-btn span:first-child { transform: translateY(3.25px) rotate(45deg); }
+  .menu-open .menu-btn span:last-child { transform: translateY(-3.25px) rotate(-45deg); }
+
+  @media (max-width: 920px) {
+    .nav { padding-inline-start: 16px; }
+    .nav .nav-cta { display: none; }
+    .menu-btn { display: block; }
+    .nav-links {
+      position: absolute; top: calc(100% + 10px); left: 0; right: 0;
+      flex-direction: column; align-items: stretch; gap: 2px; padding: 10px;
+      border-radius: 24px; background: var(--paper); color: var(--ink);
+      box-shadow: inset 0 0 0 1px var(--line), 0 24px 50px -20px rgba(0,0,0,0.45);
+      opacity: 0; transform: translateY(-6px) scale(0.98); transform-origin: top center; pointer-events: none;
+      transition: opacity 160ms ease, transform 220ms var(--ease-out);
+    }
+    .menu-open .nav-links { opacity: 1; transform: none; pointer-events: auto; }
+    .nav-links a { opacity: 1; padding: 14px 16px; border-radius: 14px; font-size: 16px; }
+    .nav-links .menu-cta { display: flex; margin-top: 6px; background: var(--ink); color: var(--paper); justify-content: center; font-weight: 700; }
+  }
+  .nav-links .menu-cta { display: none; }
+  @media (max-width: 380px) { .brand-name { display: none; } }
+
+  /* ---------- Hero: banner slider + intro ---------- */
+  .hero {
+    position: relative; color: #fff; overflow: hidden;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, #17402A 0%, var(--night) 70%);
+    padding: calc(96px + env(safe-area-inset-top, 0px)) 0 clamp(64px, 8vw, 112px);
+  }
+  .slider {
+    position: relative; z-index: 2; width: 100%; aspect-ratio: 16 / 9; max-height: calc(100svh - 130px);
+    border-radius: 28px; overflow: hidden; background: var(--ink);
+    touch-action: pan-y; user-select: none; -webkit-user-select: none; outline: none;
+    box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6);
+  }
+  .slider:focus-visible { box-shadow: 0 0 0 2px var(--green-300), 0 30px 60px -30px rgba(0, 0, 0, 0.6); }
+  .slides { display: flex; height: 100%; transform: translate3d(0, 0, 0); transition: transform 700ms var(--ease-out); will-change: transform; }
+  .slides.dragging { transition: none; }
+  .slide { position: relative; flex: 0 0 100%; height: 100%; }
+  .slide img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; pointer-events: none; -webkit-user-drag: none; }
+  .sl-btn {
+    position: absolute; top: 50%; z-index: 3; width: 48px; height: 48px; margin-top: -24px; border: 0; border-radius: 999px;
+    display: grid; place-items: center; cursor: pointer; color: var(--ink); background: rgba(250, 247, 240, 0.9);
+    box-shadow: 0 8px 24px -10px rgba(0, 0, 0, 0.5);
+    opacity: 0; transition: opacity 200ms ease, transform 160ms var(--ease-out);
+  }
+  .sl-btn svg { width: 18px; height: 18px; }
+  .sl-btn.prev { inset-inline-start: 18px; }
+  .sl-btn.next { inset-inline-end: 18px; }
+  [dir="rtl"] .sl-btn svg { transform: scaleX(-1); }
+  .sl-btn:active { transform: scale(0.94); }
+  .slider:hover .sl-btn, .sl-btn:focus-visible { opacity: 1; }
+  @media (hover: none) { .sl-btn { display: none; } }
+  .sl-dots { position: absolute; z-index: 3; left: 50%; bottom: 16px; transform: translateX(-50%); display: flex; gap: 6px; padding: 7px 9px; border-radius: 999px; background: rgba(11, 32, 21, 0.55); }
+  .sl-dot { position: relative; width: 8px; height: 8px; padding: 0; border: 0; border-radius: 999px; cursor: pointer; overflow: hidden; background: rgba(255, 255, 255, 0.45); transition: width 300ms var(--ease-out); }
+  .sl-dot[aria-current="true"] { width: 30px; }
+  .sl-dot::after { content: ""; position: absolute; inset: 0; background: #fff; transform: scaleX(0); transform-origin: left center; }
+  [dir="rtl"] .sl-dot::after { transform-origin: right center; }
+  .sl-dot[aria-current="true"]::after { animation: sl-fill var(--sl-ms, 6000ms) linear forwards; }
+  .slider.paused .sl-dot[aria-current="true"]::after { animation-play-state: paused; }
+  .slider.static .sl-dot[aria-current="true"]::after { animation: none; transform: scaleX(1); }
+  @keyframes sl-fill { to { transform: scaleX(1); } }
+
+  .hero-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1.15fr 1fr; gap: 24px 64px; align-items: end; padding-top: clamp(48px, 6vw, 80px); }
+  .hero h1 { font-size: clamp(2.4rem, 4.6vw, 4.6rem); line-height: 1.02; letter-spacing: -0.045em; }
+  html[lang="ar"] .hero h1 { font-size: clamp(2.1rem, 4.2vw, 4rem); line-height: 1.3; }
+  .hero h1 em { font-style: normal; color: var(--green-300); }
+  .hero-lede { font-size: clamp(17px, 1.4vw, 19px); color: rgba(255,255,255,0.78); max-width: 520px; }
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  @media (max-width: 860px) {
+    .hero { padding-top: calc(84px + env(safe-area-inset-top, 0px)); }
+    .slider { border-radius: 20px; }
+    .hero-inner { grid-template-columns: 1fr; gap: 18px; }
+    .sl-dots { bottom: 10px; padding: 6px 8px; }
+  }
+  @media (max-width: 600px) {
+    .hero-ctas .btn { flex: 1 1 100%; }
+  }
+
+  /* ---------- Chapter shell ---------- */
+  .chapter { padding: var(--chapter) 0; }
+  .chapter-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; margin-bottom: 64px; }
+  .chapter-head h2 { font-size: clamp(2.2rem, 4.6vw, 4.25rem); line-height: 1.02; max-width: 760px; }
+  html[lang="ar"] .chapter-head h2 { line-height: 1.3; }
+  .chapter-head p { max-width: 400px; color: var(--muted); font-size: 18px; }
+  @media (max-width: 860px) { .chapter-head { flex-direction: column; align-items: flex-start; gap: 18px; margin-bottom: 40px; } .chapter-head p { font-size: 17px; } }
+
+  /* ---------- Statement: copy + photo + facts ---------- */
+  .st-grid { display: grid; grid-template-columns: 7fr 5fr; gap: clamp(40px, 6vw, 96px); align-items: center; }
+  .statement .big {
+    font-size: clamp(1.75rem, 3vw, 2.9rem); line-height: 1.16; font-weight: 700; letter-spacing: -0.035em; text-wrap: pretty;
+  }
+  html[lang="ar"] .statement .big { line-height: 1.55; }
+  .st-about { margin-top: 28px; color: var(--muted); font-size: 18px; max-width: 560px; }
+  .legal-names { display: grid; gap: 4px; margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-weight: 500; color: var(--ink); max-width: 560px; }
+  .legal-names .ar-name { font-family: "IBM Plex Sans Arabic", sans-serif; }
+  .st-media { margin: 0; aspect-ratio: 4 / 5; border-radius: 28px; overflow: hidden; background: var(--ink); }
+  .st-img { width: 100%; height: 100%; object-fit: cover; }
+  .facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: clamp(64px, 8vw, 112px) 0 0; border-top: 1px solid var(--line); }
+  .facts > div { padding: 30px 24px 0 0; }
+  .facts > div + div { padding-inline-start: 28px; border-inline-start: 1px solid var(--line); }
+  .facts dt { font-size: clamp(44px, 6vw, 88px); font-weight: 900; letter-spacing: -0.05em; line-height: 1; color: var(--green-900); }
+  .facts dd { margin: 12px 0 0; color: var(--muted); font-size: 16.5px; }
+  @media (max-width: 860px) {
+    .st-grid { grid-template-columns: 1fr; }
+    .st-media { aspect-ratio: 4 / 3; border-radius: 22px; }
+    .st-about { font-size: 17px; }
+  }
+  @media (max-width: 600px) {
+    .facts > div { padding: 22px 10px 0 0; }
+    .facts > div + div { padding-inline-start: 14px; }
+    .facts dt { font-size: 38px; }
+    .facts dd { font-size: 14px; }
+  }
+
+  /* ---------- Bento (gapless, dense) ---------- */
+  .why { background: var(--cream); }
+  .bento {
+    display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(270px, auto);
+    grid-auto-flow: dense; gap: 16px;
+  }
+  .card { position: relative; overflow: hidden; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; justify-content: flex-end; }
+  .card h3 { font-size: clamp(22px, 2vw, 30px); line-height: 1.18; margin-bottom: 10px; }
+  html[lang="ar"] .card h3 { line-height: 1.4; }
+  .card p { font-size: 16px; }
+  .b-a { grid-column: span 2; grid-row: span 2; color: #fff; background: var(--ink); }
+  .b-b { grid-column: span 2; color: #fff; background: var(--ink); }
+  .b-c { background: var(--green-900); color: var(--paper); }
+  .b-d { background: var(--paper); box-shadow: inset 0 0 0 1px var(--line); }
+  .b-c p { color: rgba(250,247,240,0.72); }
+  .b-d p { color: var(--muted); }
+  .card-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 700ms var(--ease-out); }
+  .card-shade { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,22,14,0.86) 0%, rgba(8,22,14,0.35) 45%, rgba(8,22,14,0.05) 75%); }
+  .card-body { position: relative; z-index: 2; }
+  .b-a .card-body p, .b-b .card-body p { color: rgba(255,255,255,0.8); max-width: 420px; }
+  .b-a h3 { font-size: clamp(28px, 3vw, 44px); }
+  .card-icon { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; margin-bottom: auto; }
+  .b-c .card-icon { background: rgba(123,179,111,0.16); color: var(--green-300); }
+  .b-d .card-icon { background: var(--cream); color: var(--green-700); }
+  .card-icon svg { width: 22px; height: 22px; }
+  @media (hover: hover) and (pointer: fine) { .card:hover .card-img { transform: scale(1.05); } }
+  @media (max-width: 960px) {
+    .bento { grid-template-columns: repeat(2, 1fr); grid-auto-rows: minmax(240px, auto); }
+    .b-a { grid-column: span 2; grid-row: span 1; min-height: 380px; }
+  }
+  @media (max-width: 600px) {
+    .bento { grid-template-columns: 1fr; gap: 12px; }
+    .b-a, .b-b { grid-column: span 1; }
+    .b-a { min-height: 420px; }
+    .card { padding: 24px; border-radius: 22px; }
+    .b-c, .b-d { min-height: 220px; }
+  }
+
+  /* ---------- Pinned split: what we do ---------- */
+  .split-grid { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(40px, 7vw, 110px); align-items: start; }
+  .split-left h2 { font-size: clamp(2.2rem, 4.4vw, 4rem); line-height: 1.02; }
+  html[lang="ar"] .split-left h2 { line-height: 1.3; }
+  .split-left > p { margin-top: 22px; color: var(--muted); font-size: 18px; max-width: 420px; }
+  .serve { margin-top: 44px; padding-top: 26px; border-top: 1px solid var(--line); }
+  .serve h3 { font-size: 15px; letter-spacing: 0; font-weight: 700; margin-bottom: 14px; }
+  .serve ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .serve li { padding: 8px 14px; border-radius: 999px; background: var(--cream); font-size: 14.5px; font-weight: 500; }
+  .steps { display: grid; gap: 16px; }
+  .step {
+    display: grid; grid-template-columns: auto 1fr; gap: 6px 28px; align-items: start;
+    padding: 44px 40px; min-height: 250px; border-radius: 28px; background: #fff; box-shadow: inset 0 0 0 1px var(--line);
+  }
+  .step-num { grid-row: span 2; font-size: clamp(48px, 5vw, 76px); font-weight: 900; line-height: 0.9; letter-spacing: -0.06em; color: transparent; -webkit-text-stroke: 1.5px var(--green-600); font-feature-settings: "tnum"; }
+  .step h3 { font-size: clamp(24px, 2.3vw, 32px); line-height: 1.1; padding-top: 4px; }
+  .step p { color: var(--muted); font-size: 17px; max-width: 460px; }
+  @media (max-width: 960px) { .split-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 600px) {
+    .step { padding: 26px 22px; gap: 4px 18px; border-radius: 22px; min-height: 0; }
+    .step-num { font-size: 44px; }
+    .split-left > p { font-size: 17px; }
+  }
+
+  /* ---------- Products: horizontal accordion ---------- */
+  .products { background: var(--night); color: var(--paper); }
+  .products .chapter-head p { color: rgba(250,247,240,0.65); }
+  .acc { display: flex; gap: 12px; height: clamp(500px, 62vh, 620px); }
+  .slice {
+    position: relative; flex: 1 1 0; min-width: 0; overflow: hidden; border-radius: 28px;
+    border: 0; padding: 0; margin: 0; cursor: pointer; text-align: start; color: #fff; background: var(--ink); font: inherit;
+    transition: flex-grow 700ms var(--ease-out);
+  }
+  .slice.open { flex-grow: 3.2; cursor: default; }
+  .slice img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 900ms var(--ease-out); }
+  .slice::after { content: ""; position: absolute; inset: 0; z-index: 1; background: rgba(8, 22, 14, 0.38); pointer-events: none; transition: opacity 400ms ease; }
+  .slice.open::after { opacity: 0; }
+  @media (hover: hover) and (pointer: fine) { .slice.open:hover img { transform: scale(1.04); } }
+  .slice-shade { position: absolute; inset: 0; background: linear-gradient(to top, rgba(8,22,14,0.92) 0%, rgba(8,22,14,0.5) 45%, rgba(8,22,14,0.12) 80%); }
+  .slice-body { position: absolute; inset: auto 0 0 0; z-index: 2; padding: 28px; }
+  .slice-title { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+  .slice-title h3 { font-size: clamp(22px, 2.2vw, 32px); line-height: 1.1; }
+  html[lang="ar"] .slice-title h3 { line-height: 1.4; }
+  .slice-title span { font-size: 14px; opacity: 0.6; white-space: nowrap; }
+  .slice-items {
+    list-style: none; margin: 18px 0 0; padding: 18px 0 0; border-top: 1px solid rgba(255,255,255,0.18);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px 28px; font-size: 15.5px;
+    max-height: 0; overflow: hidden; margin-top: 0; padding-top: 0; border-top-color: transparent;
+    opacity: 0; transform: translateY(8px); transition: opacity 200ms ease, transform 300ms var(--ease-out);
+  }
+  .slice.open .slice-items { max-height: 320px; margin-top: 18px; padding-top: 18px; border-top-color: rgba(255,255,255,0.18); opacity: 1; transform: none; transition-delay: 260ms; }
+  .slice:not(.open) .slice-title span { display: none; }
+  .slice-items li { display: flex; justify-content: space-between; gap: 10px; }
+  .slice-items li span:last-child { opacity: 0.6; font-size: 14px; }
+  .acc-note { display: flex; justify-content: space-between; align-items: center; gap: 20px 40px; flex-wrap: wrap; margin-top: 36px; color: rgba(250,247,240,0.7); font-size: 16px; }
+  .acc-note b { display: inline-block; margin-inline-end: 10px; padding: 6px 10px; border-radius: 8px; background: var(--green-300); color: var(--night); font-size: 13px; white-space: nowrap; }
+  @media (max-width: 860px) {
+    .acc { flex-direction: column; height: auto; gap: 10px; }
+    .slice { flex: none; height: 104px; transition: height 600ms var(--ease-out); border-radius: 22px; }
+    .slice.open { height: 440px; }
+    .slice-body { padding: 22px; }
+    .slice:not(.open) .slice-body { top: 0; display: flex; align-items: center; }
+    .slice:not(.open) .slice-title { width: 100%; }
+    .slice-items { grid-template-columns: 1fr; gap: 9px; }
+    .acc-note .btn { width: 100%; }
+  }
+
+  /* ---------- Origins: region index ---------- */
+  .origins { background: var(--paper); }
+  .origins-grid { display: grid; grid-template-columns: 4fr 7fr; gap: clamp(40px, 8vw, 128px); align-items: start; }
+  .origins-intro { position: sticky; top: 120px; }
+  .origins-intro h2 { font-size: clamp(2.2rem, 4.2vw, 3.75rem); line-height: 1.02; }
+  html[lang="ar"] .origins-intro h2 { line-height: 1.3; }
+  .origins-intro p { margin: 22px 0 32px; color: var(--muted); font-size: 18px; max-width: 380px; }
+  .regions { display: grid; gap: 56px; }
+  .region h3 { font-size: 14px; font-weight: 700; letter-spacing: 0; color: var(--green-600); margin-bottom: 10px; }
+  .region ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 24px; }
+  .region li { padding: 18px 0; border-top: 1px solid var(--line); }
+  .country { display: inline-block; font-size: clamp(22px, 2.3vw, 32px); font-weight: 700; letter-spacing: -0.035em; line-height: 1.15; transition: transform 300ms var(--ease-out), color 200ms ease; }
+  @media (hover: hover) and (pointer: fine) {
+    .region li:hover .country { transform: translateX(6px); color: var(--green-700); }
+    [dir="rtl"] .region li:hover .country { transform: translateX(-6px); }
+  }
+  @media (max-width: 860px) {
+    .origins-grid { grid-template-columns: 1fr; }
+    .origins-intro { position: static; }
+    .regions { gap: 36px; }
+    .region ul { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; }
+    .region li { padding: 14px 0; }
+    .country { font-size: 21px; }
+  }
+
+  /* ---------- Action ---------- */
+  .action { background: var(--green-900); color: var(--paper); padding: var(--chapter) 0 0; }
+  .action h2 { font-size: clamp(3.2rem, 10vw, 10rem); line-height: 0.95; letter-spacing: -0.055em; }
+  html[lang="ar"] .action h2 { line-height: 1.25; }
+  .action h2 em { font-style: normal; color: var(--green-300); }
+  .action-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(32px, 6vw, 96px); margin-top: 64px; align-items: start; }
+  .action-lede { font-size: 19px; color: rgba(250,247,240,0.74); max-width: 440px; }
+  .details { list-style: none; margin: 40px 0 0; padding: 0; display: grid; gap: 4px; }
+  .details li { display: flex; align-items: center; gap: 16px; padding: 16px 0; border-top: 1px solid rgba(250,247,240,0.12); font-size: 17px; }
+  .details small { display: block; opacity: 0.6; font-size: 13.5px; }
+  .details i { flex: none; width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: rgba(123,179,111,0.14); color: var(--green-300); }
+  .details i svg { width: 18px; height: 18px; }
+  .form { background: var(--paper); color: var(--ink); border-radius: 28px; padding: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; position: relative; z-index: 2; }
+  .form h3 { grid-column: 1 / -1; font-size: 26px; margin-bottom: 4px; }
+  .field { display: grid; gap: 7px; }
+  .field.full { grid-column: 1 / -1; }
+  .field label { font-size: 13.5px; font-weight: 700; color: var(--muted); }
+  .field input, .field select, .field textarea {
+    width: 100%; font: 500 16px/1.4 var(--sans); color: var(--ink);
+    padding: 14px 15px; border: 0; border-radius: 14px; background: var(--cream);
+    transition: box-shadow 160ms ease, background-color 160ms ease; -webkit-appearance: none; appearance: none;
+  }
+  .field select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%235A6A5E' stroke-width='1.6'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 15px center; padding-right: 40px;
+  }
+  [dir="rtl"] .field select { background-position: left 15px center; padding-right: 15px; padding-left: 40px; }
+  .field textarea { min-height: 120px; resize: vertical; }
+  .field input:focus, .field select:focus, .field textarea:focus { outline: none; background: #fff; box-shadow: inset 0 0 0 1.5px var(--green-600); }
+  .form-actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .form-actions .btn { flex: 1 1 200px; }
+  .form-hint { grid-column: 1 / -1; font-size: 13px; color: var(--muted); }
+  @media (max-width: 960px) { .action-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 600px) { .form { grid-template-columns: 1fr; padding: 26px 18px; border-radius: 22px; } .action-grid { margin-top: 40px; } }
+
+  .footer { margin-top: var(--chapter); padding: 40px 0 calc(40px + env(safe-area-inset-bottom)); border-top: 1px solid rgba(250,247,240,0.12); font-size: 14.5px; color: rgba(250,247,240,0.6); }
+  .footer-row { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .footer .brand { color: var(--paper); }
+  .footer-links { display: flex; flex-wrap: wrap; gap: 8px 26px; }
+  @media (hover: hover) and (pointer: fine) { .footer-links a:hover { color: var(--paper); } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .slice, .slice img, .slice-items, .card-img, .btn { transition: none !important; }
+  }
 </style>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@600&display=swap">
 
+<style>
+  .vswitch { position: fixed; z-index: 70; left: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    display: flex; gap: 2px; padding: 4px; border-radius: 999px; background: rgba(11, 32, 21, 0.88);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12), 0 10px 30px -12px rgba(0,0,0,0.5); font: 600 13px/1 system-ui, -apple-system, sans-serif; }
+  .vswitch a { padding: 9px 12px; border-radius: 999px; color: rgba(250,247,240,0.75); text-decoration: none; white-space: nowrap;
+    transition: color 160ms ease, transform 160ms cubic-bezier(0.23, 1, 0.32, 1); -webkit-tap-highlight-color: transparent; }
+  .vswitch a:active { transform: scale(0.96); }
+  .vswitch a[aria-current="page"] { background: #FAF7F0; color: #0F2A1A; }
+  @media (hover: hover) and (pointer: fine) { .vswitch a:not([aria-current]):hover { color: #FAF7F0; } }
+</style>
 </head>
 <body>
-<iframe class="frame" id="frame" title="Qurtuba website" src="v2.html"></iframe>
 
-<div class="switch" id="switch" data-active="v2" role="group" aria-label="Choose design version">
-  <button type="button" id="btn-v1" data-v="v1" aria-pressed="false">Version 1</button>
-  <button type="button" id="btn-v2" data-v="v2" aria-pressed="true">Version 2</button>
-</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="mark" viewBox="0 0 600 372">
+      <path fill="#2B784A" d="M4 305C82 260 192 268 296 363C262 357 232 352 182 360C112 372 52 356 4 305Z"/>
+      <path fill="#143A24" d="M116 323C182 301 252 322 294 361C238 342 180 326 116 323Z"/>
+      <g transform="translate(600 0) scale(-1 1)">
+        <path fill="#2B784A" d="M4 305C82 260 192 268 296 363C262 357 232 352 182 360C112 372 52 356 4 305Z"/>
+        <path fill="#143A24" d="M116 323C182 301 252 322 294 361C238 342 180 326 116 323Z"/>
+      </g>
+      <path fill="#2B784A" d="M104 133C190 145 262 200 284 300C290 326 294 346 296 363C272 338 244 318 210 300C150 268 120 220 104 133Z"/>
+      <path fill="#143A24" d="M186 210C242 242 282 298 296 361C276 320 240 268 186 210Z"/>
+      <g transform="translate(600 0) scale(-1 1)">
+        <path fill="#2B784A" d="M104 133C190 145 262 200 284 300C290 326 294 346 296 363C272 338 244 318 210 300C150 268 120 220 104 133Z"/>
+        <path fill="#143A24" d="M186 210C242 242 282 298 296 361C276 320 240 268 186 210Z"/>
+      </g>
+      <path fill="#7BB36F" d="M300 5C332 37 357 78 357 126C357 176 326 214 308 252L300 268L292 252C274 214 243 176 243 126C243 78 268 37 300 5Z"/>
+      <path fill="#143A24" d="M300 92L306 250L300 266L294 250Z"/>
+    </symbol>
+  </defs>
+</svg>
 
+<nav class="nav" id="nav" aria-label="Main">
+  <a href="#top" class="brand" aria-label="Qurtuba">
+    <svg viewBox="0 0 600 372"><use href="#mark"/></svg>
+    <span class="brand-name">Qurtuba</span>
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="#about" data-i18n="nav.about">About</a>
+    <a href="#why" data-i18n="nav.why">Why Qurtuba</a>
+    <a href="#services" data-i18n="nav.services">What we do</a>
+    <a href="#products" data-i18n="nav.products">Products</a>
+    <a href="#contact" class="menu-cta" data-i18n="nav.contact">Contact us</a>
+  </div>
+  <div class="nav-end">
+    <button class="lang-btn" id="langBtn" type="button" lang="ar" aria-label="عرض الموقع بالعربية">عربي</button>
+    <a href="#contact" class="btn btn-cream nav-cta" data-i18n="nav.contact">Contact us</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- ATTENTION -->
+  <header class="hero" id="hero">
+    <div class="wrap">
+      <!-- Hero banners: to add a photo, put it in assets/img/slides/ and copy one <div class="slide"> line. -->
+      <div class="slider" id="slider" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Qurtuba">
+        <div class="slides" id="slides">
+          <div class="slide"><img src="assets/img/slides/1.jpg" alt="Spices, pulses and grains in wooden bowls" width="1600" height="900" fetchpriority="high" decoding="async"></div>
+          <div class="slide"><img src="assets/img/slides/2.jpg" alt="Dried hibiscus, sage, herbs and flowers" width="1536" height="1024" loading="lazy" decoding="async"></div>
+          <div class="slide"><img src="assets/img/slides/3.jpg" alt="Chickpeas, lentils, beans and grains" width="1536" height="1024" loading="lazy" decoding="async"></div>
+        </div>
+        <button class="sl-btn prev" type="button" data-dir="-1" aria-label="Previous photo"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L5 8l5 5"/></svg></button>
+        <button class="sl-btn next" type="button" data-dir="1" aria-label="Next photo"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3l5 5-5 5"/></svg></button>
+        <div class="sl-dots" id="slDots"></div>
+      </div>
+    </div>
+    <div class="wrap hero-inner">
+      <h1 data-hero data-i18n="hero.title">Your trusted partner for food trade in <em>Jordan</em>.</h1>
+      <div>
+        <p class="hero-lede" data-hero data-i18n="hero.lede">Qurtuba buys quality food products directly from producers around the world, imports them by the ton on its own account, and supplies them wholesale across Jordan.</p>
+        <div class="hero-ctas" data-hero>
+        <a href="#contact" class="btn btn-cream"><span data-i18n="hero.cta1">Become a supplier</span>
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <a href="#products" class="btn btn-glass" data-i18n="hero.cta2">What we import</a>
+      </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- INTEREST: statement -->
+  <section class="chapter statement" id="about">
+    <div class="wrap">
+      <div class="st-grid">
+        <div class="st-copy" data-reveal>
+          <p class="big" id="statement" data-i18n="st.text">Qurtuba buys directly from producers around the world, ships by the ton to Jordan, and supplies supermarkets, wholesalers and food businesses across the Kingdom.</p>
+          <p class="st-about" data-i18n="about.p">A Jordanian food trading and distribution company based in Amman, the capital of Jordan. We specialise in sourcing, importing and wholesale supply of food and beverage products, with a focus on reliable supply, strong relationships and professional service.</p>
+          <div class="legal-names">
+            <span lang="en" dir="ltr">Qurtuba For Trading Foodstuffs Est.</span>
+            <span class="ar-name" lang="ar" dir="rtl">مؤسسة قرطبة لتجارة المواد الغذائية</span>
+          </div>
+        </div>
+        <figure class="st-media" data-reveal>
+          <img class="st-img" src="assets/img/warehouse.jpg" alt="" loading="lazy" decoding="async">
+        </figure>
+      </div>
+      <dl class="facts" data-reveal>
+        <div><dt>12</dt><dd data-i18n="fact.1">Countries of origin</dd></div>
+        <div><dt>4</dt><dd data-i18n="fact.2">Continents we buy from</dd></div>
+        <div><dt data-i18n="fact.3n">25 kg</dt><dd data-i18n="fact.3">Standard bulk sack</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- INTEREST: bento -->
+  <section class="chapter why" id="why">
+    <div class="wrap">
+      <div class="chapter-head" data-reveal>
+        <h2 data-i18n="why.title">Built on trust, kept by delivery.</h2>
+        <p data-i18n="why.lede">For producers abroad, we are a direct buyer: clear orders, bulk volumes and long-term relationships.</p>
+      </div>
+      <div class="bento">
+        <article class="card b-a" data-reveal>
+          <img class="card-img" src="assets/img/amman.jpg" alt="" loading="lazy" decoding="async">
+          <div class="card-shade"></div>
+          <div class="card-body">
+            <h3 data-i18n="why.1">On the ground in Jordan</h3>
+            <p data-i18n="why.1p">We are based in Amman and know the local market, its buyers and its import process.</p>
+          </div>
+        </article>
+        <article class="card b-b" data-reveal>
+          <img class="card-img" src="assets/img/ship.jpg" alt="" loading="lazy" decoding="async">
+          <div class="card-shade"></div>
+          <div class="card-body">
+            <h3 data-i18n="why.2">Sourced worldwide</h3>
+            <p data-i18n="why.2p">Asia · Africa · Europe &amp; more</p>
+          </div>
+        </article>
+        <article class="card b-c grain" data-reveal>
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 21v-5h5"/></svg></div>
+          <div class="card-body">
+            <h3 data-i18n="why.3">Buying by the ton</h3>
+            <p data-i18n="why.3p">Planned, repeat orders in tonnage, so suppliers can plan production with confidence.</p>
+          </div>
+        </article>
+        <article class="card b-d" data-reveal>
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 11l3 3 5-5"/><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6z"/></svg></div>
+          <div class="card-body">
+            <h3 data-i18n="why.4">Professional service</h3>
+            <p data-i18n="why.4p">Clear terms, honest communication and long-term partnerships.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESIRE: pinned split -->
+  <section class="chapter" id="services">
+    <div class="wrap split-grid">
+      <div class="split-left" id="splitLeft">
+        <h2 data-i18n="svc.title">From your origin to the Jordanian market.</h2>
+        <p data-i18n="svc.lede">Every step is ours: we buy abroad, ship, clear customs, store in Amman and deliver across Jordan.</p>
+        <div class="serve">
+          <h3 data-i18n="serve.title">Who we supply in Jordan</h3>
+          <ul>
+            <li data-i18n="serve.1">Supermarkets &amp; retailers</li>
+            <li data-i18n="serve.2">Wholesalers</li>
+            <li data-i18n="serve.3">Roasteries &amp; spice shops</li>
+            <li data-i18n="serve.4">Restaurants &amp; catering</li>
+            <li data-i18n="serve.5">Food manufacturers</li>
+          </ul>
+        </div>
+      </div>
+      <div class="steps" id="steps">
+        <article class="step" data-step>
+          <span class="step-num">01</span>
+          <h3 data-i18n="svc.s1">Buying</h3>
+          <p data-i18n="svc.s1p">We buy directly from producers and exporters abroad, by the ton, choosing origin, grade and packing for the Jordanian market.</p>
+        </article>
+        <article class="step" data-step>
+          <span class="step-num">02</span>
+          <h3 data-i18n="svc.s2">Importing</h3>
+          <p data-i18n="svc.s2p">We ship the goods to Jordan ourselves and handle import documentation and customs clearance.</p>
+        </article>
+        <article class="step" data-step>
+          <span class="step-num">03</span>
+          <h3 data-i18n="svc.s3">Storage &amp; wholesale</h3>
+          <p data-i18n="svc.s3p">We hold stock in Amman and supply it in bulk to trade customers.</p>
+        </article>
+        <article class="step" data-step>
+          <span class="step-num">04</span>
+          <h3 data-i18n="svc.s4">Distribution</h3>
+          <p data-i18n="svc.s4p">We deliver to retailers, wholesalers and food businesses across Jordan.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESIRE: products accordion -->
+  <section class="chapter products grain" id="products">
+    <div class="wrap" style="position:relative;z-index:2">
+      <div class="chapter-head" data-reveal>
+        <h2 data-i18n="prod.title">Pantry staples, in wholesale volume.</h2>
+        <p data-i18n="prod.lede">Our current range covers dry foods: pulses, grains, seeds, spices and herbs. We are open to new products and new origins.</p>
+      </div>
+
+      <div class="acc" id="acc" data-reveal>
+        <button class="slice open" type="button" aria-expanded="true">
+          <img src="assets/img/chickpeas.jpg" alt="" loading="lazy" decoding="async">
+          <div class="slice-shade"></div>
+          <div class="slice-body">
+            <div class="slice-title"><h3 data-i18n="c1">Pulses &amp; Legumes</h3><span data-i18n="c1.alt">البقوليات</span></div>
+            <ul class="slice-items">
+              <li><span data-i18n="p.chickpeas">Chickpeas</span><span data-i18n="o.in">India</span></li>
+              <li><span data-i18n="p.fava">Fava beans</span><span data-i18n="o.sy">Syria</span></li>
+              <li><span data-i18n="p.lupini">Lupini beans</span><span data-i18n="o.cl">Chile</span></li>
+              <li><span data-i18n="p.lentils">Lentils</span><span data-i18n="o.kz">Kazakhstan</span></li>
+              <li><span data-i18n="p.whitebeans">White beans</span><span></span></li>
+            </ul>
+          </div>
+        </button>
+        <button class="slice" type="button" aria-expanded="false">
+          <img src="assets/img/bulgur.jpg" alt="" loading="lazy" decoding="async">
+          <div class="slice-shade"></div>
+          <div class="slice-body">
+            <div class="slice-title"><h3 data-i18n="c2">Grains &amp; Cereals</h3><span data-i18n="c2.alt">الحبوب</span></div>
+            <ul class="slice-items">
+              <li><span data-i18n="p.bulgur">Red bulgur</span><span></span></li>
+              <li><span data-i18n="p.wheat">Cracked wheat</span><span></span></li>
+              <li><span data-i18n="p.oats">Oats</span><span></span></li>
+              <li><span data-i18n="p.vermicelli">Vermicelli</span><span></span></li>
+              <li><span data-i18n="p.popcorn">Popcorn kernels</span><span data-i18n="o.ar">Argentina</span></li>
+            </ul>
+          </div>
+        </button>
+        <button class="slice" type="button" aria-expanded="false">
+          <img src="assets/img/seeds.jpg" alt="" loading="lazy" decoding="async">
+          <div class="slice-shade"></div>
+          <div class="slice-body">
+            <div class="slice-title"><h3 data-i18n="c3">Seeds</h3><span data-i18n="c3.alt">البذور</span></div>
+            <ul class="slice-items">
+              <li><span data-i18n="p.sesame">Sesame</span><span data-i18n="o.eg">Egypt</span></li>
+              <li><span data-i18n="p.sunflower">Sunflower seeds</span><span data-i18n="o.ar">Argentina</span></li>
+              <li><span data-i18n="p.flax">Flaxseed</span><span data-i18n="o.tr">Türkiye</span></li>
+              <li><span data-i18n="p.mustard">Mustard seed</span><span data-i18n="p.mustard.v">Yellow · Black</span></li>
+              <li><span data-i18n="p.fenugreek">Fenugreek</span><span data-i18n="o.in">India</span></li>
+            </ul>
+          </div>
+        </button>
+        <button class="slice" type="button" aria-expanded="false">
+          <img src="assets/img/spices.jpg" alt="" loading="lazy" decoding="async">
+          <div class="slice-shade"></div>
+          <div class="slice-body">
+            <div class="slice-title"><h3 data-i18n="c4">Spices &amp; Herbs</h3><span data-i18n="c4.alt">البهارات والأعشاب</span></div>
+            <ul class="slice-items">
+              <li><span data-i18n="p.turmeric">Turmeric</span><span data-i18n="v.ground">Ground</span></li>
+              <li><span data-i18n="p.parsley">Parsley</span><span data-i18n="v.dried">Dried</span></li>
+              <li><span data-i18n="p.basil">Basil</span><span data-i18n="v.dried">Dried</span></li>
+              <li><span data-i18n="p.curry">Curry</span><span></span></li>
+              <li><span data-i18n="p.guava">Guava leaves</span><span></span></li>
+            </ul>
+          </div>
+        </button>
+      </div>
+
+      <div class="acc-note" data-reveal>
+        <span><b data-i18n="pack.kg">25 kg</b><span data-i18n="pack.note">Most lines supplied in bulk sacks, with smaller trade packs on selected items.</span></span>
+        <a href="#contact" class="btn btn-cream" data-i18n="prod.cta">Offer us your products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESIRE: sourcing origins -->
+  <section class="chapter origins" id="origins" aria-labelledby="originsTitle">
+    <div class="wrap origins-grid">
+      <div class="origins-intro" data-reveal>
+        <h2 id="originsTitle" data-i18n="orig.title">Where our products come from.</h2>
+        <p data-i18n="orig.lede">We import from established growing regions across four continents, and we are always open to new origins.</p>
+        <a href="#contact" class="btn btn-line"><span data-i18n="orig.cta">Offer a new origin</span>
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+      <div class="regions" id="regions"><div class="region"><h3>Asia</h3><ul><li><span class="country">China</span></li><li><span class="country">India</span></li><li><span class="country">Kazakhstan</span></li><li><span class="country">Vietnam</span></li><li><span class="country">Indonesia</span></li></ul></div><div class="region"><h3>Africa</h3><ul><li><span class="country">Egypt</span></li><li><span class="country">Madagascar</span></li></ul></div><div class="region"><h3>Levant & Türkiye</h3><ul><li><span class="country">Syria</span></li><li><span class="country">Türkiye</span></li></ul></div><div class="region"><h3>Americas</h3><ul><li><span class="country">Argentina</span></li><li><span class="country">Brazil</span></li><li><span class="country">Chile</span></li></ul></div></div>
+    </div>
+  </section>
+
+  <!-- ACTION -->
+  <section class="action grain" id="contact">
+    <div class="wrap" style="position:relative;z-index:2">
+      <h2 data-reveal data-i18n="ct.title">Let’s work <em>together.</em></h2>
+      <div class="action-grid">
+        <div data-reveal>
+          <p class="action-lede" data-i18n="ct.lede">Are you a producer or exporter with products to sell, or a business in Jordan looking for supply? Tell us about it and we will get back to you.</p>
+          <ul class="details">
+            <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></i><span data-i18n="ct.addr">Amman, Hashemite Kingdom of Jordan<small>Local time GMT+3</small></span></li>
+            <!-- TODO: replace with real phone number -->
+            <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></i><a href="tel:+96270000000" dir="ltr">+962 7 0000 0000</a></li>
+            <!-- TODO: replace with real email -->
+            <li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></i><a href="mailto:info@qurtuba.com" dir="ltr">info@qurtuba.com</a></li>
+          </ul>
+        </div>
+
+        <form class="form" id="inquiry" data-reveal>
+          <h3 data-i18n="f.title">Send us a message</h3>
+          <div class="field"><label for="f-name" data-i18n="f.name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="f-biz" data-i18n="f.company">Company</label><input id="f-biz" name="business" autocomplete="organization"></div>
+          <div class="field"><label for="f-phone" data-i18n="f.phone">Phone / WhatsApp</label><input id="f-phone" name="phone" type="tel" dir="ltr" autocomplete="tel" inputmode="tel" placeholder="+ country code" data-i18n-ph="f.phone.ph" required></div>
+          <div class="field"><label for="f-country" data-i18n="f.country">Country</label><input id="f-country" name="country" autocomplete="country-name" required></div>
+          <div class="field full">
+            <label for="f-type" data-i18n="f.type">I am a…</label>
+            <select id="f-type" name="type">
+              <option data-i18n="f.t1">Producer / exporter</option>
+              <option data-i18n="f.t3">Trading company</option>
+              <option data-i18n="f.t4">Buyer in Jordan</option>
+              <option data-i18n="f.t5">Other</option>
+            </select>
+          </div>
+          <div class="field full"><label for="f-msg" data-i18n="f.msg">Message</label><textarea id="f-msg" name="message" placeholder="e.g. We export Egyptian sesame and can supply 50 tons a month." data-i18n-ph="f.msg.ph"></textarea></div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-ink" data-via="whatsapp" data-i18n="f.wa">Send via WhatsApp</button>
+            <button type="submit" class="btn btn-line" data-via="email" data-i18n="f.email">Send by email</button>
+          </div>
+          <p class="form-hint" data-i18n="f.hint">Your message goes directly to our team in Amman.</p>
+        </form>
+      </div>
+
+      <footer class="footer">
+        <div class="footer-row">
+          <a href="#top" class="brand" aria-label="Qurtuba">
+            <svg viewBox="0 0 600 372"><use href="#mark"/></svg>
+            <span class="brand-name">Qurtuba</span>
+          </a>
+          <nav class="footer-links" aria-label="Footer">
+            <a href="#about" data-i18n="nav.about">About</a>
+            <a href="#services" data-i18n="nav.services">What we do</a>
+            <a href="#products" data-i18n="nav.products">Products</a>
+            <a href="#contact" data-i18n="nav.contact">Contact us</a>
+          </nav>
+          <span>© <span id="year">2026</span> <span data-i18n="footer.legal">Qurtuba For Trading Foodstuffs Est. · Amman, Jordan</span></span>
+        </div>
+      </footer>
+    </div>
+  </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
-  const frame = document.getElementById("frame");
-  const sw = document.getElementById("switch");
-  const buttons = [...sw.querySelectorAll("button")];
+  // ---- Contact settings (replace with real details) ----
+  const WHATSAPP_NUMBER = "96270000000";
+  const INQUIRY_EMAIL   = "info@qurtuba.com";
 
-  function show(v, { remember = true } = {}) {
-    if (v !== "v1" && v !== "v2") v = "v2";
-    sw.dataset.active = v;
-    buttons.forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v));
-    const target = v + ".html";
-    if (!frame.getAttribute("src").endsWith(target)) frame.src = target;
-    if (remember) {
-      try { localStorage.setItem("qurtuba-version", v); } catch (e) {}
-      try { history.replaceState(null, "", "#" + v); } catch (e) {}
-    }
+  const REGIONS = [{"en": "Asia", "ar": "آسيا", "rows": [["China", "الصين"], ["India", "الهند"], ["Kazakhstan", "كازاخستان"], ["Vietnam", "فيتنام"], ["Indonesia", "إندونيسيا"]]}, {"en": "Africa", "ar": "أفريقيا", "rows": [["Egypt", "مصر"], ["Madagascar", "مدغشقر"]]}, {"en": "Levant & Türkiye", "ar": "بلاد الشام وتركيا", "rows": [["Syria", "سوريا"], ["Türkiye", "تركيا"]]}, {"en": "Americas", "ar": "الأمريكيتان", "rows": [["Argentina", "الأرجنتين"], ["Brazil", "البرازيل"], ["Chile", "تشيلي"]]}];
+
+  const AR = {
+    "meta.title": "قرطبة | استيراد وتوزيع المواد الغذائية في الأردن",
+    "meta.desc": "مؤسسة قرطبة لتجارة المواد الغذائية: مستورد مواد غذائية مقرّه عمّان، يشتري بالجملة من المنتجين حول العالم ويورّد للسوق الأردني.",
+    "nav.about": "من نحن", "nav.why": "لماذا قرطبة", "nav.services": "ماذا نقدّم", "nav.products": "منتجاتنا", "nav.contact": "تواصل معنا",
+    "hero.title": "شريككم الموثوق لتجارة المواد الغذائية في <em>الأردن</em>.",
+    "hero.lede": "تشتري قرطبة منتجات غذائية عالية الجودة مباشرة من المنتجين حول العالم، وتستوردها بالأطنان لحسابها الخاص، ثم تورّدها بالجملة في مختلف أنحاء الأردن.",
+    "hero.cta1": "كن مورّداً لنا", "hero.cta2": "ماذا نستورد",
+    "st.text": "تشتري قرطبة مباشرة من المنتجين حول العالم، وتشحن بالأطنان إلى الأردن، لتورّد إلى المحلات الكبرى وتجار الجملة والمنشآت الغذائية في مختلف أنحاء المملكة.",
+    "about.p": "شركة أردنية متخصصة في تجارة وتوزيع المواد الغذائية، مقرّها عمّان، عاصمة المملكة الأردنية الهاشمية. نعمل في توريد واستيراد وتوزيع المواد الغذائية والمشروبات بالجملة، ونركّز على انتظام التوريد ومتانة العلاقات والخدمة المهنية.",
+    "fact.1": "دولة منشأ", "fact.2": "قارات نشتري منها", "fact.3n": "25 كغ", "fact.3": "كيس الجملة القياسي",
+    "why.title": "نبني الثقة، ونصونها بالالتزام.",
+    "why.lede": "بالنسبة للمنتجين في الخارج، نحن مشترٍ مباشر: طلبيات واضحة، وكميات كبيرة، وعلاقات طويلة الأمد.",
+    "why.1": "حضور فعلي في الأردن", "why.1p": "مقرّنا في عمّان، ونعرف السوق المحلي ومشتريه وإجراءات الاستيراد فيه.",
+    "why.2": "مصادر من حول العالم", "why.2p": "آسيا · أفريقيا · أوروبا وغيرها",
+    "why.3": "نشتري بالأطنان", "why.3p": "طلبيات مخطّطة ومتكررة بالأطنان، ليتمكّن مورّدونا من التخطيط للإنتاج بثقة.",
+    "why.4": "خدمة مهنية", "why.4p": "شروط واضحة وتواصل صادق وشراكات طويلة الأمد.",
+    "svc.title": "من بلد المنشأ إلى السوق الأردني.",
+    "svc.lede": "كل خطوة نتولّاها بأنفسنا: نشتري من الخارج، ونشحن، ونخلّص جمركياً، ونخزّن في عمّان، ونوزّع في مختلف أنحاء الأردن.",
+    "serve.title": "من نخدم في الأردن",
+    "serve.1": "السوبرماركت ومحلات التجزئة", "serve.2": "تجار الجملة", "serve.3": "المحامص ومحلات البهارات", "serve.4": "المطاعم وخدمات التموين", "serve.5": "مصانع الأغذية",
+    "svc.s1": "الشراء", "svc.s1p": "نشتري مباشرة من المنتجين والمصدّرين في الخارج بالأطنان، ونختار المنشأ والدرجة والتعبئة بما يناسب السوق الأردني.",
+    "svc.s2": "الاستيراد", "svc.s2p": "نشحن البضائع إلى الأردن بأنفسنا، ونتولّى وثائق الاستيراد والتخليص الجمركي.",
+    "svc.s3": "التخزين والبيع بالجملة", "svc.s3p": "نحتفظ بالمخزون في عمّان ونورّده بكميات كبيرة لعملائنا من التجار.",
+    "svc.s4": "التوزيع", "svc.s4p": "نوصل المنتجات إلى محلات التجزئة وتجار الجملة والمنشآت الغذائية في مختلف أنحاء الأردن.",
+    "prod.title": "مواد تموينية أساسية بكميات الجملة.",
+    "prod.lede": "تشمل تشكيلتنا الحالية المواد الغذائية الجافة: البقوليات والحبوب والبذور والبهارات والأعشاب، ونرحّب بمنتجات ومناشئ جديدة.",
+    "c1": "البقوليات", "c1.alt": "Pulses &amp; Legumes", "c2": "الحبوب", "c2.alt": "Grains &amp; Cereals",
+    "c3": "البذور", "c3.alt": "Seeds", "c4": "البهارات والأعشاب", "c4.alt": "Spices &amp; Herbs",
+    "p.chickpeas": "حمّص", "p.lentils": "عدس", "p.fava": "فول عريض", "p.whitebeans": "فاصولياء بيضاء", "p.lupini": "ترمس",
+    "p.bulgur": "برغل أحمر", "p.wheat": "قمح جريش", "p.oats": "شوفان", "p.vermicelli": "شعيرية", "p.popcorn": "ذرة بوشار",
+    "p.sesame": "سمسم", "p.sunflower": "بزر دوّار الشمس", "p.flax": "بزر الكتان", "p.mustard": "بزر الخردل", "p.mustard.v": "أصفر · أسود", "p.fenugreek": "حلبة",
+    "p.turmeric": "كركم", "p.curry": "كاري", "p.parsley": "بقدونس", "p.basil": "ريحان", "p.guava": "ورق الجوافة",
+    "v.ground": "مطحون", "v.dried": "مجفّف",
+    "o.ar": "الأرجنتين", "o.kz": "كازاخستان", "o.tr": "تركيا", "o.eg": "مصر", "o.sy": "سوريا", "o.cl": "تشيلي", "o.in": "الهند",
+    "pack.kg": "25 كغ", "pack.note": "تتوفر معظم الأصناف في أكياس جملة، مع عبوات تجارية أصغر لبعض الأصناف.",
+    "prod.cta": "اعرضوا علينا منتجاتكم",
+    "orig.title": "من أين تأتي منتجاتنا.",
+    "orig.lede": "نستورد من مناطق زراعية معروفة في أربع قارات، ونرحّب دائماً بمناشئ جديدة.",
+    "orig.cta": "اعرضوا علينا منشأً جديداً",
+    "ct.title": "لنعمل <em>معاً.</em>",
+    "ct.lede": "هل أنتم منتجون أو مصدّرون لديكم منتجات للبيع، أو شركة في الأردن تبحث عن مورّد؟ أخبرونا وسنتواصل معكم.",
+    "ct.addr": "عمّان، المملكة الأردنية الهاشمية<small>التوقيت المحلي GMT+3</small>",
+    "f.title": "أرسلوا لنا رسالة", "f.name": "الاسم", "f.company": "الشركة", "f.phone": "الهاتف / واتساب", "f.phone.ph": "+ رمز الدولة",
+    "f.country": "الدولة", "f.type": "طبيعة النشاط", "f.t1": "منتج / مصدّر", "f.t2": "مالك علامة تجارية", "f.t3": "شركة تجارية", "f.t4": "مشترٍ في الأردن", "f.t5": "أخرى",
+    "f.msg": "الرسالة", "f.msg.ph": "مثال: نصدّر السمسم المصري ويمكننا توريد 50 طناً شهرياً.",
+    "f.wa": "إرسال عبر واتساب", "f.email": "إرسال بالبريد الإلكتروني", "f.hint": "تصل رسالتكم مباشرة إلى فريقنا في عمّان.",
+    "footer.legal": "مؤسسة قرطبة لتجارة المواد الغذائية · عمّان، الأردن",
+    "menu.open": "فتح القائمة", "menu.close": "إغلاق القائمة",
+    "msg.head": "استفسار من موقع قرطبة", "msg.name": "الاسم", "msg.business": "الشركة", "msg.country": "الدولة", "msg.type": "النشاط", "msg.phone": "الهاتف", "msg.subject": "استفسار"
+  };
+  const EN = {
+    "menu.open": "Open menu", "menu.close": "Close menu",
+    "msg.head": "Inquiry from the Qurtuba website", "msg.name": "Name", "msg.business": "Company", "msg.country": "Country", "msg.type": "Type", "msg.phone": "Phone", "msg.subject": "Inquiry"
+  };
+
+  const root = document.documentElement;
+  const hasGSAP = !!(window.gsap && window.ScrollTrigger);
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (hasGSAP) gsap.registerPlugin(ScrollTrigger);
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // ---------- i18n ----------
+  const metaDesc = document.querySelector('meta[name="description"]');
+  EN["meta.title"] = document.title; EN["meta.desc"] = metaDesc.content;
+  document.querySelectorAll("[data-i18n]").forEach(el => { EN[el.dataset.i18n] ??= el.innerHTML; });
+  document.querySelectorAll("[data-i18n-ph]").forEach(el => { EN[el.dataset.i18nPh] = el.placeholder; });
+  let lang = "en";
+  const t = (k) => (lang === "ar" ? AR : EN)[k] ?? EN[k];
+
+  // ---------- Nav ----------
+  const nav = document.getElementById("nav");
+  const menuBtn = document.getElementById("menuBtn");
+  function setMenu(open) {
+    nav.classList.toggle("menu-open", open);
+    menuBtn.setAttribute("aria-expanded", open);
+    menuBtn.setAttribute("aria-label", t(open ? "menu.close" : "menu.open"));
+  }
+  menuBtn.addEventListener("click", () => setMenu(!nav.classList.contains("menu-open")));
+  document.querySelectorAll("#navLinks a").forEach(a => a.addEventListener("click", () => setMenu(false)));
+  document.addEventListener("keydown", e => { if (e.key === "Escape") setMenu(false); });
+  document.addEventListener("click", e => { if (!nav.contains(e.target)) setMenu(false); });
+  // Pill turns light once the dark hero has scrolled away
+  new IntersectionObserver(([en]) => nav.classList.toggle("on-light", !en.isIntersecting), { rootMargin: "-72px 0px 0px 0px" })
+    .observe(document.getElementById("hero"));
+
+  // ---------- Origins ----------
+  function renderRegions() {
+    const i = lang === "en" ? 0 : 1;
+    document.getElementById("regions").innerHTML = REGIONS.map(r =>
+      `<div class="region"><h3>${r[lang]}</h3><ul>${r.rows.map(row =>
+        `<li><span class="country">${row[i]}</span></li>`).join("")}</ul></div>`).join("");
   }
 
-  buttons.forEach(b => b.addEventListener("click", () => show(b.dataset.v)));
+  // Rows cascade in once per region
+  function revealRegions() {
+    if (!hasGSAP || reduceMotion) return;
+    document.querySelectorAll(".region").forEach(region => {
+      gsap.from(region.querySelectorAll("h3, li"), {
+        y: 16, opacity: 0, duration: 0.7, ease: "power3.out", stagger: 0.06,
+        scrollTrigger: { trigger: region, start: "top 85%", once: true }
+      });
+    });
+  }
 
-  // Open on #v1 / #v2 when linked directly, otherwise the last version viewed, otherwise Version 2
-  let start = (location.hash || "").replace("#", "");
-  if (!start) { try { start = localStorage.getItem("qurtuba-version") || ""; } catch (e) {} }
-  show(start || "v2", { remember: false });
+  // ---------- Language ----------
+  const langBtn = document.getElementById("langBtn");
+  function setLang(next, { save = true } = {}) {
+    lang = next === "ar" ? "ar" : "en";
+    root.lang = lang; root.dir = lang === "ar" ? "rtl" : "ltr";
+    document.querySelectorAll("[data-i18n]").forEach(el => { el.innerHTML = t(el.dataset.i18n); });
+    document.querySelectorAll("[data-i18n-ph]").forEach(el => { el.placeholder = t(el.dataset.i18nPh); });
+    document.title = t("meta.title"); metaDesc.content = t("meta.desc");
+    langBtn.textContent = lang === "ar" ? "English" : "عربي";
+    langBtn.lang = lang === "ar" ? "en" : "ar";
+    langBtn.setAttribute("aria-label", lang === "ar" ? "View the site in English" : "عرض الموقع بالعربية");
+    setMenu(nav.classList.contains("menu-open"));
+    renderRegions();
+    revealRegions();
+    window.__sliderRelayout?.();
+    if (hasGSAP) ScrollTrigger.refresh();
+    if (save) {
+      try { localStorage.setItem("qurtuba-lang", lang); } catch (e) {}
+      const url = new URL(location.href);
+      lang === "ar" ? url.searchParams.set("lang", "ar") : url.searchParams.delete("lang");
+      history.replaceState(null, "", url);
+    }
+  }
+  langBtn.addEventListener("click", () => setLang(lang === "ar" ? "en" : "ar"));
+
+  // ---------- Accordion ----------
+  const slices = [...document.querySelectorAll(".slice")];
+  const openSlice = (s) => slices.forEach(x => { const on = x === s; x.classList.toggle("open", on); x.setAttribute("aria-expanded", on); });
+  const canHover = matchMedia("(hover: hover) and (pointer: fine)").matches;
+  slices.forEach(s => {
+    s.addEventListener("click", () => openSlice(s));
+    s.addEventListener("focus", () => openSlice(s));
+    if (canHover) s.addEventListener("mouseenter", () => openSlice(s));
+  });
+
+  // ---------- Initial language ----------
+  {
+    const param = new URL(location.href).searchParams.get("lang");
+    let saved = null; try { saved = localStorage.getItem("qurtuba-lang"); } catch (e) {}
+    const initial = param || saved || ((navigator.language || "").toLowerCase().startsWith("ar") ? "ar" : "en");
+    if (initial === "ar") setLang("ar", { save: false }); else revealRegions();
+  }
+
+  // ---------- Motion ----------
+  if (hasGSAP && !reduceMotion) {
+    // Hero: image settles, copy rises in once
+    gsap.from("[data-hero]", { y: 28, opacity: 0, duration: 1, ease: "power3.out", stagger: 0.1, delay: 0.15 });
+
+    // Generic reveals
+    gsap.utils.toArray("[data-reveal]").forEach(el => {
+      gsap.from(el, { y: 40, opacity: 0, duration: 0.9, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 86%", once: true } });
+    });
+
+    const mm = gsap.matchMedia();
+    // Pinned split: title holds while the steps scroll past (desktop)
+    mm.add("(min-width: 961px)", () => {
+      const left = document.getElementById("splitLeft");
+      const steps = document.getElementById("steps");
+      ScrollTrigger.create({
+        trigger: steps, pin: left, pinSpacing: false,
+        start: "top 120px",
+        end: () => "+=" + Math.max(0, steps.offsetHeight - left.offsetHeight),
+        invalidateOnRefresh: true
+      });
+    });
+    gsap.utils.toArray("[data-step]").forEach(el => {
+      gsap.from(el, { y: 60, opacity: 0, scale: 0.97, duration: 0.9, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 88%", once: true } });
+    });
+
+    // Bento photos: grow in, dim as they leave
+    gsap.utils.toArray(".card-img, .st-img").forEach(img => {
+      gsap.fromTo(img, { scale: 1.18 }, { scale: 1, ease: "none", scrollTrigger: { trigger: img.parentElement, start: "top bottom", end: "center center", scrub: true } });
+    });
+  }
+
+  // ---------- Hero slider ----------
+  (() => {
+    const slider = document.getElementById("slider");
+    const track = document.getElementById("slides");
+    const slides = [...track.children];
+    const dotsBox = document.getElementById("slDots");
+    const n = slides.length;
+    const DELAY = 6000;
+    let index = 0, timer = null, hovering = false, visible = true, dragging = false;
+    slider.style.setProperty("--sl-ms", DELAY + "ms");
+
+    const dots = slides.map((_, k) => {
+      const d = document.createElement("button");
+      d.type = "button"; d.className = "sl-dot"; d.setAttribute("aria-label", `${k + 1} / ${n}`);
+      d.addEventListener("click", () => go(k));
+      dotsBox.appendChild(d);
+      return d;
+    });
+    if (n < 2) { slider.querySelectorAll(".sl-btn").forEach(b => b.hidden = true); dotsBox.hidden = true; return; }
+
+    // In Arabic the row of photos runs right-to-left, so the track moves the other way
+    const sign = () => (root.dir === "rtl" ? 1 : -1);
+    const place = (px = 0) => { track.style.transform = `translate3d(calc(${sign() * index * 100}% + ${px}px), 0, 0)`; };
+
+    function go(k) {
+      index = (k + n) % n;
+      place();
+      slides.forEach((el, j) => el.setAttribute("aria-hidden", j !== index));
+      dots.forEach((d, j) => {
+        d.removeAttribute("aria-current");
+        if (j === index) { void d.offsetWidth; d.setAttribute("aria-current", "true"); } // restart the progress fill
+      });
+      schedule();
+    }
+    function schedule() {
+      clearTimeout(timer);
+      const paused = hovering || !visible || dragging || document.hidden;
+      slider.classList.toggle("paused", paused);
+      if (!reduceMotion && !paused) timer = setTimeout(() => go(index + 1), DELAY);
+    }
+    if (reduceMotion) slider.classList.add("static");
+
+    // Arrow buttons: "next" always means the following photo, whatever the reading direction
+    slider.querySelectorAll(".sl-btn").forEach(b => b.addEventListener("click", () => go(index + +b.dataset.dir)));
+    slider.addEventListener("keydown", e => {
+      if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+      const forward = (e.key === "ArrowRight") === (root.dir !== "rtl");
+      go(index + (forward ? 1 : -1)); e.preventDefault();
+    });
+    if (canHover) {
+      slider.addEventListener("mouseenter", () => { hovering = true; schedule(); });
+      slider.addEventListener("mouseleave", () => { hovering = false; schedule(); });
+    }
+    document.addEventListener("visibilitychange", schedule);
+    new IntersectionObserver(([en]) => { visible = en.isIntersecting; schedule(); }, { threshold: 0.25 }).observe(slider);
+
+    // Swipe / drag: the photo follows the finger; a quick flick is enough to change it
+    let startX = 0, startT = 0, dx = 0, pid = null;
+    slider.addEventListener("pointerdown", e => {
+      if (pid !== null || e.button > 0 || e.target.closest(".sl-btn, .sl-dot")) return;
+      pid = e.pointerId; startX = e.clientX; startT = performance.now(); dx = 0;
+      dragging = true; track.classList.add("dragging"); slider.setPointerCapture(pid); schedule();
+    });
+    slider.addEventListener("pointermove", e => {
+      if (e.pointerId !== pid) return;
+      dx = e.clientX - startX;
+      place(dx);
+    });
+    const end = e => {
+      if (e.pointerId !== pid) return;
+      pid = null; dragging = false; track.classList.remove("dragging");
+      const velocity = Math.abs(dx) / Math.max(1, performance.now() - startT);
+      if (Math.abs(dx) > slider.clientWidth * 0.18 || (velocity > 0.11 && Math.abs(dx) > 12)) {
+        const towardsNext = (dx < 0) === (root.dir !== "rtl");
+        go(index + (towardsNext ? 1 : -1));
+      } else { place(); schedule(); }
+    };
+    slider.addEventListener("pointerup", end);
+    slider.addEventListener("pointercancel", end);
+
+    window.__sliderRelayout = () => place();
+    go(0);
+  })();
+
+  // ---------- Inquiry form ----------
+  const form = document.getElementById("inquiry");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const d = Object.fromEntries(new FormData(form));
+    const lines = [
+      t("msg.head"),
+      `${t("msg.name")}: ${d.name}`,
+      d.business && `${t("msg.business")}: ${d.business}`,
+      `${t("msg.country")}: ${d.country}`,
+      `${t("msg.type")}: ${d.type}`,
+      `${t("msg.phone")}: ${d.phone}`,
+      d.message && `\n${d.message}`
+    ].filter(Boolean).join("\n");
+    if ((e.submitter?.dataset.via || "whatsapp") === "email") {
+      const subject = `${t("msg.subject")} — ${d.business || d.name}, ${d.country}`;
+      location.href = `mailto:${INQUIRY_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines)}`;
+    } else {
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines)}`, "_blank", "noopener");
+    }
+  });
 </script>
+
+<nav class="vswitch" aria-label="Design version" dir="ltr"><a href="v1.html">Version 1</a><a href="./" aria-current="page">Version 2</a></nav>
 </body>
 </html>

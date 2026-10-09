@@ -501,6 +501,17 @@
     .cat, .btn, .btn svg { transition: none; }
   }
 </style>
+
+<style>
+  .vswitch { position: fixed; z-index: 70; left: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    display: flex; gap: 2px; padding: 4px; border-radius: 999px; background: rgba(11, 32, 21, 0.88);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12), 0 10px 30px -12px rgba(0,0,0,0.5); font: 600 13px/1 system-ui, -apple-system, sans-serif; }
+  .vswitch a { padding: 9px 12px; border-radius: 999px; color: rgba(250,247,240,0.75); text-decoration: none; white-space: nowrap;
+    transition: color 160ms ease, transform 160ms cubic-bezier(0.23, 1, 0.32, 1); -webkit-tap-highlight-color: transparent; }
+  .vswitch a:active { transform: scale(0.96); }
+  .vswitch a[aria-current="page"] { background: #FAF7F0; color: #0F2A1A; }
+  @media (hover: hover) and (pointer: fine) { .vswitch a:not([aria-current]):hover { color: #FAF7F0; } }
+</style>
 </head>
 <body>
 
@@ -1064,5 +1075,7 @@
     }
   });
 </script>
+
+<nav class="vswitch" aria-label="Design version" dir="ltr"><a href="v1.html" aria-current="page">Version 1</a><a href="./">Version 2</a></nav>
 </body>
 </html>
